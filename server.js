@@ -3,6 +3,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
+const mongoose = require("mongoose");
 //const apiRoutes = require("./routes/apiRoutes");
 
 // Serve up static assets
@@ -16,6 +17,13 @@ app.use(bodyParser.json());
 
 // Use apiRoutes
 //app.use("/api", apiRoutes);
+
+// Set up promises with mongoose
+mongoose.Promise = global.Promise;
+// Connect to the Mongo DB
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/punctualproject"
+);
 
 // Send every request to the React app
 // Define any API routes before this runs
