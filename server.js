@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/punctualproject"
+  process.env.MONGODB_URI || "mongodb://localhost/punctual"
 );
 
 // Send every request to the React app
