@@ -4,9 +4,9 @@ import Main from "./pages/Main";
 import Nav from "./components/Nav";
 import Profile from "./pages/Profile";
 import Food from "./pages/Food";
+import BigCalendar from "./pages/BigCalendar";
 
-
-const App = () =>
+const App = () => (
   <Router>
     <div>
       <Nav />
@@ -14,9 +14,11 @@ const App = () =>
         <Route exact path="/" component={Main} />
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/food" component={Food} />
+        <Route exact path="/bigcalendar" component={BigCalendar} />
         <Route component={Main} />
       </Switch>
     </div>
-  </Router>;
+  </Router>
+);
 
 export default App;

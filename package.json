@@ -21,6 +21,10 @@
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
-    "mongoose": "^5.0.2"
+    "moment": "^2.20.1",
+    "mongoose": "^5.0.2",
+    "react": "^15.6.2",
+    "react-big-calendar": "^0.17.0",
+    "react-dom": "^15.6.2"
   }
 }
