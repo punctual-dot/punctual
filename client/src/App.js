@@ -1,13 +1,22 @@
-import React, { Component } from 'react';
-import Jumbotron from "./components/Jumbotron"
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Main from "./pages/Main";
+import Nav from "./components/Nav";
+import Profile from "./pages/Profile";
+import Food from "./pages/Food";
 
 
-class App extends Component {
-  render() {
-    return (
-      <Jumbotron />  
-    )
-  }
-}
+const App = () =>
+  <Router>
+    <div>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={Main} />
+        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/food" component={Food} />
+        <Route component={Main} />
+      </Switch>
+    </div>
+  </Router>;
 
 export default App;

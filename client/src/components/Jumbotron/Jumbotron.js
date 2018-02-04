@@ -6,6 +6,7 @@ const Jumbotron = () => (
     <h1>Punctual.</h1>
     <h3>Proud. Blunt. Trustworthy. Sleek.</h3>
   </div>
+
 );
 
 export default Jumbotron;
