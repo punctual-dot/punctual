@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
 const routes = require("./routes");
+require('dotenv').config();
 
 // Serve up static assets
 app.use(express.static("client/build"));
@@ -24,7 +25,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/punctual"
 );
-
+console.log(process.env.MONGODB_URI)
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
