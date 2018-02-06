@@ -13,7 +13,7 @@ const Nav = () =>
           Punctual.
         </a>
       </div>
-      <p class="navbar-text navbar-right">Signed in as <a href="/profile" class="navbar-link">Jang Yurai</a></p>
+      <p className="navbar-text navbar-right">Signed in as <a href="/profile" className="navbar-link">Jang Yurai</a></p>
     </div>
   </nav>;
 
