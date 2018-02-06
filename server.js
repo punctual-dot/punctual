@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const mongoose = require("mongoose");
-//const apiRoutes = require("./routes/apiRoutes");
+const routes = require("./routes");
 
 // Serve up static assets
 app.use(express.static("client/build"));
@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Use apiRoutes
-//app.use("/api", apiRoutes);
+app.use(routes);
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
