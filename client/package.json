@@ -5,13 +5,17 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "moment": "^2.20.1",
-    "react": "^15.6.2",
     "react-big-calendar": "^0.17.0",
-    "react-dom": "^15.6.2",
     "react-modal": "^3.1.12",
-    "react-router-dom": "^4.2.2",
+    "react-sanfona": "^1.0.6",
     "react-scripts": "1.0.14",
-    "react-sanfona": "^1.0.6"
+    "auth0-js": "^9.0.0",
+    "bootstrap": "^3.3.7",
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.31.0",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
