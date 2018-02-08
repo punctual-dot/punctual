@@ -1,0 +1,37 @@
+.react-sanfona-item-title{
+	color: white;
+	text-align: center;
+	height: 80px;
+	vertical-align: middle;
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-weight: lighter;
+	padding-top: 25px
+}
+
+
+.cycle .react-sanfona-item-title{
+	background: #ffe1eb	
+}
+
+.moods .react-sanfona-item-title{
+	background: #fcc7c9
+}
+
+.symptoms .react-sanfona-item-title{
+	background: #e0eefc	
+}
+
+.food .react-sanfona-item-title{
+	background: #01094f	
+}
+
+.myth .react-sanfona-item-title{
+	background: #467058	
+}
+
+
+
+.cycle .rbc-toolbar-label {
+	font-weight: bold;
+}
