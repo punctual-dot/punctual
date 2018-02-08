@@ -5,4 +5,7 @@ export default {
   getUsers: function() {
     return axios.get("/api/profile");
   },
+  saveUser: function(userData) {
+    return axios.post("/api/profile", userData)
+  }
 };
