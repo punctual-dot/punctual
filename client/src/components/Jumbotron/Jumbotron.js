@@ -1,10 +1,9 @@
 import React from "react";
 import "./Jumbotron.css";
 
-const Jumbotron = () => (
+const Jumbotron = (props) => (
   <div className="jumbotron text-center">
-    <h1>Punctual.</h1>
-    <h3>Proud. Blunt. Trustworthy. Sleek.</h3>
+  {props.children}
   </div>
 
 );
