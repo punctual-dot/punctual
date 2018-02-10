@@ -55,7 +55,7 @@ class Food extends React.Component {
     }
 
     search(searchQuery) {
-        const url = `http://api.yummly.com/v1/api/recipes?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b&q=${searchQuery}&maxResult=3`
+        const url = `https://api.yummly.com/v1/api/recipes?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b&q=${searchQuery}&maxResult=3`
         Request.get(url).then((response) => {
             this.setState({
                 recipe: response.body.matches[0]
