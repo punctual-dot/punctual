@@ -5,10 +5,41 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 
 BigCalendar.momentLocalizer(moment);
 
-const MyCalendar = props => (
-  <div>
-    <BigCalendar events={[]} startAccessor="startDate" endAccessor="endDate" />
-  </div>
-);
+function Event({ event }) {
+  return (
+    <span>
+      <strong>{event.title}</strong>
+      <div style={{ marginRight: "10px" }}>
+        {event.mood && ":  " + event.mood}
+      </div>
+      <img src={event.icon} style={{ width: "20px", height: "20px" }} />
+    </span>
+  );
+}
+
+const MyCalendar = props => {
+  const MyEvents = [
+    {
+      id: 0,
+      title: "Title",
+      mood: "Energetic",
+      icon:
+        "https://www.iconexperience.com/_img/v_collection_png/512x512/shadow/heart.png",
+      allDay: true,
+      start: new Date(2018, 1, 3),
+      end: new Date(2018, 1, 5)
+    }
+  ];
+  return (
+    <div>
+      <BigCalendar
+        events={MyEvents}
+        step={30}
+        showMultiDayTimes
+        components={{ event: Event }}
+      />
+    </div>
+  );
+};
 
 export default MyCalendar;
