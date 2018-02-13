@@ -11,25 +11,25 @@
 
 
 .cycle .react-sanfona-item-title{
-	background: #ffe1eb	
+	background: #6E64C5;
+	border-bottom: 2px solid white
 }
 
-.moods .react-sanfona-item-title{
-	background: #fcc7c9
-}
 
 .symptoms .react-sanfona-item-title{
-	background: #e0eefc	
+	background: #5A58B7;	
+	border-bottom: 2px solid white
 }
 
 .food .react-sanfona-item-title{
-	background: #01094f	
+	background: #5662F4;
+	border-bottom: 2px solid white
 }
 
-.myth .react-sanfona-item-title{
-	background: #467058	
+.moods .react-sanfona-item-title{
+	background: #7384F9;;	
+	border-bottom: 2px solid white
 }
-
 
 
 .cycle .rbc-toolbar-label {

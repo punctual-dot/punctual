@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Navbar, Button } from 'react-bootstrap';
+import "../Nav/nav.css";
+// import { Navbar, Button } from 'react-bootstrap';
 
 
 class AppAuth extends Component {
@@ -20,47 +21,46 @@ class AppAuth extends Component {
 
     return (
       <div>
-        <Navbar fluid>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <a href="#">Welcome to Punctual!</a>
-            </Navbar.Brand>
-            <Button
-              bsStyle="primary"
-              className="btn-margin"
+        <ul>
+          <li className="item">
+            <a href="#"
               onClick={this.goTo.bind(this, 'home')}
             >
               Home
-            </Button>
+            </a>
+          </li>
+
+
             {
               !isAuthenticated() && (
-                  <Button
+              <li className="item">
+                  <a href="#"
                     id="qsLoginBtn"
-                    bsStyle="primary"
-                    className="btn-margin"
                     onClick={this.login.bind(this)}
                   >
                     Log In
-                  </Button>
+                  </a>
+              </li>
                 )
             }
             {
               isAuthenticated() && (
-                  <Button
+                <li className="item">
+                  <a href="#"
                     id="qsLogoutBtn"
-                    bsStyle="primary"
-                    className="btn-margin"
                     onClick={this.logout.bind(this)}
                   >
                     Log Out
-                  </Button>
+                  </a>
+                </li>
                 )
             }
-          </Navbar.Header>
-        </Navbar>
+            <li className="item"><a href="#">settings</a></li>
+        </ul>
       </div>
     );
   }
 }
+
 
 export default AppAuth;

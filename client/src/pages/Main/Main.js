@@ -7,10 +7,7 @@ class Main extends Component {
   render() {
     return (
 		<div>
-            <Jumbotron>
-              <h1>Punctual Main Page</h1>
-            </Jumbotron>
-         
+                     
       </div>
     )
 }

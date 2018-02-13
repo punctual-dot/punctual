@@ -12,24 +12,32 @@ class Toggle extends Component {
   render() {
     return (
 		<div>
-      		<h1>Toggle toggle <small>Subtext for profile if we want to</small></h1>
       		
       		<Accordion>
+      			{/*Calendar*/}
       			<AccordionItem title={`Cycle`} className={`cycle`}>
 				    <BigCalendar />
 		        </AccordionItem>
-		        <AccordionItem title={`Moods`} className={`moods`}>
-						<Jumbotron> <Message /> </Jumbotron>
-		        </AccordionItem>
+		        
+		        {/*Symptoms*/}
 		        <AccordionItem title={`Symptoms`} className={`symptoms`}>
 						<h1> Placeholder for symptoms </h1>
 		        </AccordionItem>
+		       
+		        {/*Foods*/}
 		        <AccordionItem title={`Food`} className={`food`}>
 						<Food />
 		        </AccordionItem>
-		        <AccordionItem title={`Myths`} className={`myth`}>
-						<h1> Placeholder for myth </h1>
+
+		        {/*Moods*/}
+		        <AccordionItem title={`Moods`} className={`moods`}>
+						<h1> Placeholder for symptoms </h1>
 		        </AccordionItem>
+		        
+		      
+		        
+
+		        
    
       		</Accordion>
   		</div>
