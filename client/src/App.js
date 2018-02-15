@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Router } from 'react-router-dom';
 import Main from "./pages/Main";
-import Nav from "./components/Nav";
 import Jumbotron from "./components/Jumbotron";
 import Profile from "./pages/Profile";
 import Food from "./pages/Food";

@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import BigCalendar from "../../components/BigCalendar/BigCalendar.js"
 import { Accordion, AccordionItem } from 'react-sanfona';
 import "./toggle.css"
-import Jumbotron from "../../components/Jumbotron";
-import Message from "../../components/Message";
 import Food from "../../pages/Food";
 
 

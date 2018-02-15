@@ -13,7 +13,7 @@ const Jumbotron = (props) => (
 				</div>
 
 				<div className="col-sm-4">
-				    <img src="phone.png" className="iphone" alt="iphone image" width="auto" height="500"></img>
+				    <img src="phone.png" className="iphone" alt="iphone" width="auto" height="500"></img>
 				</div>
 			</div>
 </div>
