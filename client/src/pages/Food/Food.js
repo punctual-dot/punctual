@@ -44,6 +44,7 @@ class Food extends React.Component {
                 searchQuery: '',
                 recipeID: ''
             });
+            console.log(response.body.matches)
         })
     }
 
