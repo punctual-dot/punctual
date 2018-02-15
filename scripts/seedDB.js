@@ -6,7 +6,7 @@ require("dotenv").config();
 // This file empties the Symptoms collection and inserts the Symptom below
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/punctual");
-const symptomsSeed = [
+const symptomSeed = [
   {
     symptoms: "Acne",
     advice:
@@ -27,7 +27,7 @@ const symptomsSeed = [
       "Dark chocolate, milk, cheese, spinach, peas, asparagus, mushrooms, beef"
   },
   {
-    symptoms: "Dehydated",
+    symptoms: "Thirsty",
     advice:
       "Estrogen, it seems, is actually associated with the body's ability to retain water. The lower it is, the less your body holds onto; and this fluctuation may result in an increased risk of dehydration. It's important to drink a lot of water and keep an eye on your hydration levels.",
     food: "Water, Coconut, Watermelon"
@@ -36,28 +36,17 @@ const symptomsSeed = [
     symptoms: "Depressed",
     advice:
       "Leafy green vegetables are a superfood and one of the things you should always have in your diet. During your period they can help with cramps and be a great source of the calcium you need, as mentioned above.",
-    food: "Spinach, Kale"
+    food: "Spinach, Kale, walnuts, mushrooms, tomatoes"
   },
+  
   {
-    symptoms: "Headache",
-    advice:
-      "This delicious, flavorful fish is stock full of omega-3 and vitamin D, both of which help with PMS symptoms, so make sure you eat this the week before your period. It also has anti-inflammatory effects, keeping your cramps in check and reducing bloating. Add some teriyaki sauce and bon appetit!",
-    food: "Salmon, Milk, Eggs, Cheese"
-  },
-  {
-    sympton: "Moodiness",
+    sympton: "Moody",
     advice:
       "Magnesium helps our bodies regulate serotonin activity, the brain’s feel-good neurotransmitter and natural appetite suppressor. PMS can lower magnesium in blood levels causing emotional stress and cravings.",
     food:
       "Black beans, pumpkin seeds, artichokes, peanuts, spinach, tofu, brown rice, cashews"
   },
-  {
-    symptoms: "Muscle Ache",
-    advice:
-      "A clear sign of magnesium deficiency is aching joints and muscles. There’s also lots of inflammation in the body with magnesium deficiency.",
-    food:
-      "Black beans, pumpkin seeds, artichokes, peanuts, spinach, tofu, brown rice, cashews"
-  },
+  
   {
     symptoms: "Tired",
     advice:
@@ -66,13 +55,13 @@ const symptomsSeed = [
   }
 ];
 
-// db.Symptoms.remove({})
-//   .then(() => db.Symptoms.collection.insertMany(symptomsSeed))
-//   .then(data => {
-//     console.log(data.insertedIds.length + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
+db.Symptom.remove({})
+  .then(() => db.Symptoms.collection.insertMany(symptomsSeed))
+  .then(data => {
+    console.log(data.insertedIds.length + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
