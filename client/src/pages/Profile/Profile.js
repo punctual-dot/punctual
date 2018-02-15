@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API"
 import { Input, FormBtn } from "../../components/Form";
-
+import "./profile.css"
 
 
 class Profile extends Component {
@@ -50,6 +50,7 @@ class Profile extends Component {
   render() {
     return (
     <div>
+        <div className="container-fluid form">
 
             <form>
             <label>What 's your name?</label>
@@ -94,7 +95,7 @@ class Profile extends Component {
                       </strong>
                   </div>
               ))}
-
+      </div>       
 
       </div>
    )

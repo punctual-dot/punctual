@@ -3,7 +3,7 @@ import "./Jumbotron.css";
 
 const Jumbotron = (props) => (
 
-<div className="container-fluid">
+<div className="container-fluid summary-header">
 			<div className="row">
 				<div className="col-sm-2">
 				</div>
@@ -13,7 +13,7 @@ const Jumbotron = (props) => (
 				</div>
 
 				<div className="col-sm-4">
-				    <img src="phone.png" className="iphone" alt="iphone image" width="auto" height="500"></img>
+				    <img src="phone.png" className="iphone" alt="iphone" width="auto" height="500"></img>
 				</div>
 			</div>
 </div>
