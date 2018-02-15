@@ -8,17 +8,10 @@ class Food extends React.Component {
         this.state = {
             searchQuery: '',
             recipes: [],
-            recipeID: ''
         }
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.search = this.search.bind(this);    
-        this.handleRecipeClick = this.handleRecipeClick.bind(this);
-        this.getRecipe = this.getRecipe.bind(this)
-    }
-
-    componentDidMount(){
-        this.getRecipe (this.state.recipeID);
     }
     
     handleInputChange = event => {
@@ -40,35 +33,28 @@ class Food extends React.Component {
         const url = `https://api.yummly.com/v1/api/recipes?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b&q=${searchQuery}&maxResult=8`
         Request.get(url).then((response) => {
             this.setState({
-                recipes:response.body.matches,
-                searchQuery: '',
-                recipeID: ''
-            });
-            console.log(response.body.matches)
+                recipes: [],
+                searchQuery: ''
+            })
+            response.body.matches.forEach(match => {
+                console.log("MATCH", match);
+                const url = `https://api.yummly.com/v1/api/recipe/${match.id}?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b`
+                Request.get(url).then((response) => {
+                    console.log("MATCH RESPONSE", response)
+                    match.fullImageUrl = response.body.images[0].hostedLargeUrl
+                    match.sourceUrl = response.body.source.sourceRecipeUrl;
+                    this.state.recipes.push(
+                        match
+                    );
+                    console.log("STATE.RECIPES", this.state.recipes)
+                    this.setState({
+                        recipes:this.state.recipes
+                    })
+                });
+            })
         })
     }
-
-    getRecipe(recipeID) {
-        const url = `https://api.yummly.com/v1/api/recipe/${recipeID}?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b`
-        Request.get(url).then((response) => {
-            this.setState({
-                recipes:[],
-                searchQuery: "",
-                recipeID: ''
-            })
-            window.open(response.body.source.sourceRecipeUrl,'_blank')
-        });
-    }
-
     
-    handleRecipeClick = event => {
-        event.preventDefault(); 
-        console.log(event.target.value)
-        this.getRecipe(event.target.value)
-        console.log(this.state)
-    }
-    
-
     render(){
         return (
             <div>
@@ -82,10 +68,8 @@ class Food extends React.Component {
                 
                 {this.state.recipes.map(recipe => (
                     <div>
-                        {recipe.smallImageUrls.map(image =>(
-                            <img src={image} alt = "img" />
-                        ))} 
-                        <button name="{recipeName}" value={recipe.id} onClick={this.handleRecipeClick}> {recipe.recipeName} </button>
+                        <img src={recipe.fullImageUrl} alt = "fullsize" />
+                        <a href={recipe.sourceUrl} className="active" target="_blank">{recipe.recipeName}</a>
                 
                         <h3>Ingredients</h3>
                         {recipe.ingredients.map(ingredient =>(
@@ -93,7 +77,6 @@ class Food extends React.Component {
                             <li>{ingredient}</li>
                             </ul>
                         ))} 
-
                     </div>
                 ))}
         </div>
