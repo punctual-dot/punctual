@@ -8,7 +8,6 @@ class Profile extends Component {
   state = {
     users: [],
     name:'',
-    email:'',
     lengthofperiod: '',
     lastdateoflastperiod: ''
   };
@@ -21,7 +20,7 @@ class Profile extends Component {
   loadUsers = () => {
     API.getUsers()
       .then(res =>
-        this.setState({ users: res.data,  name:'',email:'',lengthofperiod: '', lastdateoflastperiod: ''}, console.log(res.data[0].name))
+        this.setState({ users: res.data,  name:'',lengthofperiod: '', lastdateoflastperiod: ''}, console.log(res.data[0].name))
         )
       .catch(err => console.log(err))
   }
@@ -37,10 +36,9 @@ class Profile extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.name && this.state.email && this.state.lengthofperiod && this.state.lastdateoflastperiod) {
+    if (this.state.name && this.state.lengthofperiod && this.state.lastdateoflastperiod) {
       API.saveUser({
         name: this.state.name,
-        email: this.state.email,
         lengthofperiod: this.state.lengthofperiod,
         lastdateoflastperiod: this.state.lastdateoflastperiod
       })
@@ -61,13 +59,7 @@ class Profile extends Component {
               name="name"
               placeholder="Required"
             />
-            <label>What 's your email address?</label>
-            <Input
-              value={this.state.email}
-              onChange={this.handleInputChange}
-              name="email"
-              placeholder="Required"
-            />
+          
             <label>How long does your period last on average?</label>
             <Input
               type="number"
@@ -85,7 +77,7 @@ class Profile extends Component {
               type="date"
             />
             <FormBtn
-              disabled={!(this.state.name && this.state.email && this.state.lengthofperiod && this.state.lengthofperiod)}
+              disabled={!(this.state.name && this.state.lengthofperiod && this.state.lengthofperiod)}
               onClick={this.handleFormSubmit}
               >
               Submit Your Info
@@ -98,7 +90,7 @@ class Profile extends Component {
                   <div key={user._id}> 
                       <strong>
                         {user.name} 
-                        {user.email}
+        
                       </strong>
                   </div>
               ))}

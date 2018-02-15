@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import BigCalendar from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import "./BigCalendar.css"
 
 BigCalendar.momentLocalizer(moment);
 
@@ -12,7 +13,7 @@ function Event({ event }) {
       <div style={{ marginRight: "10px" }}>
         {event.mood && ":  " + event.mood}
       </div>
-      <img src={event.icon} style={{ width: "20px", height: "20px" }} />
+      <img src={event.icon} style={{ width: "20px", height: "20px" }} alt="icon" />
     </span>
   );
 }

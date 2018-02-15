@@ -1,0 +1,61 @@
+.navbar{
+padding: 0px;
+margin: 0px;
+height: auto;
+}
+
+
+
+ol, ul {
+    list-style: none;
+}
+li {
+    display: inline-block;
+    padding: 20px 0 10px;
+    vertical-align: middle;
+}
+a:hover, a:focus, a:active {
+    color: #4A4FEF;
+    text-decoration: none;
+}
+a {
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: lighter;
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+}
+a {
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    margin: 0 12px;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    color: #4A4FEF;
+}
+a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #4A4FEF;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+a:active::before {
+    background-color: #4A4FEF;
+}
+a:hover::before, a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+    background-color: #82E1D1;
+
+}

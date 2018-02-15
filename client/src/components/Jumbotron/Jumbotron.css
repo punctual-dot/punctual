@@ -1,4 +1,152 @@
-.jumbotron {
-  min-height: 300px;
-  padding-top: 75px;
+.container-fluid {
+background: #F6F6F6;
+}
+
+.header-text{
+	padding-top: 70px;
+}
+
+.body-text{
+	font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+	margin-left: 40px;
+	font-size: 15px;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .iphone {
+       height:350px;
+       width: auto;
+       padding-top: 20px
+
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .body-text {
+      font-size: 12px;
+
+    }
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .logo {
+       width: 270px;
+       height: auto;
+       
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .header-text{
+      padding-top: 30px;
+      
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 765px) {
+    .iphone {
+       height:250px;
+       width: auto;
+       padding-top: 20px;
+      margin-right: 100px;
+      padding-right: 0px;
+      float: right;
+
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .body-text {
+      font-size: 10px;
+      width: 200px;
+      margin-right: 0px;
+      padding-right: 0px
+
+    }
+}
+
+
+
+@media only screen and (max-width: 765px) {
+    .logo {
+       width: 170px;
+       height: ;
+      margin-left: 30px
+
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .header-text{
+      padding-top: 30px;
+      margin-right: 0px;
+      padding-right: 0px;
+      position: absolute;
+      margin-left: 120px
+
+    }
+}
+
+
+
+@media only screen and (max-width: 650px) {
+    .iphone {
+       height:250px;
+       width: auto;
+       padding-top: 20px;
+      margin-right: 100px;
+      padding-right: 0px;
+      float: right;
+
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .body-text {
+      font-size: 10px;
+      width: 200px;
+      margin-right: 0px;
+      padding-right: 0px
+
+    }
+}
+
+
+
+@media only screen and (max-width: 650px) {
+    .logo {
+       width: 170px;
+       height: ;
+      margin-left: 20px
+
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .header-text{
+      padding-top: 30px;
+      margin-right: 0px;
+      padding-right: 0px;
+      position: absolute;
+      margin-left: 40px
+
+    }
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+    .container-fluid {
+        display: none;
+    }
 }
