@@ -1,37 +1,34 @@
-.react-sanfona-item-title{
-	color: white;
-	text-align: center;
-	height: 80px;
-	vertical-align: middle;
-	font-family: 'Playfair Display', serif;
-	font-style: italic;
-	font-weight: lighter;
-	padding-top: 25px
+.react-sanfona-item-title {
+  color: white;
+  text-align: center;
+  height: 80px;
+  vertical-align: middle;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: lighter;
+  padding-top: 25px;
 }
 
-
-.cycle .react-sanfona-item-title{
-	background: #6E64C5;
-	border-bottom: 2px solid white
+.cycle .react-sanfona-item-title {
+  background: #6e64c5;
+  border-bottom: 2px solid white;
 }
 
-
-.symptoms .react-sanfona-item-title{
-	background: #5A58B7;	
-	border-bottom: 2px solid white
+.symptoms .react-sanfona-item-title {
+  background: #5a58b7;
+  border-bottom: 2px solid white;
 }
 
-.food .react-sanfona-item-title{
-	background: #5662F4;
-	border-bottom: 2px solid white
+.food .react-sanfona-item-title {
+  background: #5662f4;
+  border-bottom: 2px solid white;
 }
 
-.moods .react-sanfona-item-title{
-	background: #7384F9;;	
-	border-bottom: 2px solid white
+.moods .react-sanfona-item-title {
+  background: #7384f9;
+  border-bottom: 2px solid white;
 }
-
 
 .cycle .rbc-toolbar-label {
-	font-weight: bold;
+  font-weight: bold;
 }
