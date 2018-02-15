@@ -2,9 +2,17 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  name: { type: String, required: true },
-  lengthofperiod: {type: Number, required: true},
-  lastdateoflastperiod: { type: Date, required: true}
+  name: { 
+  	type: String, required: true },
+  	lengthofperiod: {type: Number, required: true},
+  	lastdateoflastperiod: { type: Date, required: true}
+
+  // symptoms: [
+  // {
+  // 	type: Schema.Types.ObjectId,
+  // 	ref: "Symptom"
+  // 	}
+  // ]
 });
 
 const User = mongoose.model("User", userSchema);
