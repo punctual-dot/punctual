@@ -3,6 +3,7 @@ import BigCalendar from "../../components/BigCalendar/BigCalendar.js";
 import { Accordion, AccordionItem } from "react-sanfona";
 import "./toggle.css";
 import Food from "../../pages/Food";
+import Symptoms from "../../components/Symptoms/Symptoms.js"
 
 class Toggle extends Component {
   render() {
@@ -16,7 +17,7 @@ class Toggle extends Component {
 
           {/*Symptoms*/}
           <AccordionItem title={`Symptoms`} className={`symptoms`}>
-            <h1> Placeholder for symptoms </h1>
+            <Symptoms />
           </AccordionItem>
 
           {/*Foods*/}
