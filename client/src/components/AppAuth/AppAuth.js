@@ -23,7 +23,7 @@ class AppAuth extends Component {
       <div>
         <ul>
           <li className="item">
-            <a href="#"
+            <a href="/"
               onClick={this.goTo.bind(this, 'home')}
             >
               Home
@@ -55,7 +55,7 @@ class AppAuth extends Component {
                 </li>
                 )
             }
-            <li className="item"><a href="#">settings</a></li>
+            <li className="item"><a href="/profile">settings</a></li>
         </ul>
       </div>
     );
