@@ -2,10 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const symptomSchema = new Schema({
-  symptoms: { type: String, required: true },
-  advice: { type: String, required: true },
-  food: { type: String, required: true }
-  
+
+  symptoms: { type: String },
+  advice: { type: String },
+  food: { type: String },
+  dateofsymptom: { type: Date }
 });
 
 const Symptom = mongoose.model("Symptom", symptomSchema);

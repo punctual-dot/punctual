@@ -4,6 +4,7 @@ import { Accordion, AccordionItem } from "react-sanfona";
 import "./toggle.css";
 import Food from "../../pages/Food";
 import Symptoms from "../../components/Symptoms/Symptoms.js"
+import Message from "../../components/Symptoms/"
 
 class Toggle extends Component {
   /* create state for symptoms results*/

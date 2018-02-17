@@ -6,7 +6,7 @@ import "./profile.css"
 
 class Profile extends Component {
   state = {
-    users: [],
+    user: '',
     name:'',
     lengthofperiod: '',
     lastdateoflastperiod: '',
@@ -15,18 +15,17 @@ class Profile extends Component {
 
   componentDidMount() {
     console.log("works!")
-    this.loadUsers();
+    this.loadUser(this.state.user._id);
   }
 
-  loadUsers = () => {
-    API.getUsers()
+  loadUser = id => {
+    API.getUser(id)
       .then(res =>
-        this.setState({ users: res.data,  name:'',lengthofperiod: '', lastdateoflastperiod: '', lengthofcycle: ''}, console.log(res.data[0].name))
+        this.setState({ user: res.data,  name:'',lengthofperiod: '', lastdateoflastperiod: '', lengthofcycle: ''}, console.log("CURRENT USER ID: "+res.data._id), window.open("/profile/" + res.data._id, "_self"))
         )
       .catch(err => console.log(err))
   }
   
-
   handleInputChange = event => {
     const { name, value } = event.target; 
     console.log(name, value)
@@ -44,9 +43,9 @@ class Profile extends Component {
         lastdateoflastperiod: this.state.lastdateoflastperiod,
         lengthofcycle: this.state.lengthofcycle
       })
-        .then(res => this.loadUsers())
-        .catch(err => console.log(err));
-    }
+        .then(res => this.loadUser(res.data._id))
+        .catch(err => console.log(err))
+      }
   };
 
   render() {
@@ -76,6 +75,7 @@ class Profile extends Component {
                 placeholder="Days"
               />  
 
+<<<<<<< HEAD
               <label className="form-questions">How long does this chick usually stick around?</label>
               <Input
                 type="number"
