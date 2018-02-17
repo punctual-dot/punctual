@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API"
 import { Input, FormBtn } from "../../components/Form";
 import "./profile.css"
+import Jumbotron from "../../components/Jumbotron/Jumbotron.js"
 
 
 class Profile extends Component {
@@ -51,6 +52,7 @@ class Profile extends Component {
   render() {
     return (
     <div>
+      <Jumbotron />
       <div id="form" className="row form-row">
         <div className="col-lg-8 col-lg-offset-2">
           <div className="container-fluid form">
@@ -75,7 +77,6 @@ class Profile extends Component {
                 placeholder="Days"
               />  
 
-<<<<<<< HEAD
               <label className="form-questions">How long does this chick usually stick around?</label>
               <Input
                 type="number"
@@ -94,7 +95,7 @@ class Profile extends Component {
               />
 
               <FormBtn className="submit-button"
-                disabled={!(this.state.name && this.state.lengthofcycle && this.state.lengthofperiod && this.state.lastdateoflastperiod && this.state.lengthofcycle)}
+                disabled={!(this.state.name && this.state.lengthofcycle && this.state.lengthofperiod && this.state.lastdateoflastperiod)}
                 onClick={this.handleFormSubmit}
                 >
                 Submit
@@ -104,18 +105,7 @@ class Profile extends Component {
         </div>
       </div>
 
-        <div className="container-fluid">
-          <h1>Hello,</h1>
-                {this.state.users.map(user => (
-                  <div key={user._id}> 
-                      <strong>
-                        {user.name} 
-        
-                      </strong>
-                  </div>
-              ))}
-          </div>
-    </div>       
+     </div>    
 
    )
   }

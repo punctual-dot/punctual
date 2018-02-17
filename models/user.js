@@ -6,7 +6,7 @@ const userSchema = new Schema({
   name: { type: String, required: true },
   lengthofperiod: {type: Number, required: true},
   lastdateoflastperiod: { type: Date, required: true},
-  lengthofcycle: {type: Number, required: true}
+  lengthofcycle: {type: Number, required: true},
 
   symptoms: [
     {

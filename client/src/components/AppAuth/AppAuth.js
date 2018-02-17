@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "../Nav/nav.css";
+import Jumbotron from "../Jumbotron/Jumbotron.js"
 // import { Navbar, Button } from 'react-bootstrap';
 
 
@@ -20,6 +21,7 @@ class AppAuth extends Component {
     const { isAuthenticated } = this.props.auth;
 
     return (
+
       <div>
         <ul>
           <li className="item">
@@ -57,6 +59,7 @@ class AppAuth extends Component {
             }
             <li className="item"><a href="/profile">settings</a></li>
         </ul>
+        
       </div>
     );
   }
