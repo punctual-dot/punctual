@@ -6,26 +6,25 @@ import { Input, FormBtn } from "../../components/Form";
 
 class Profile extends Component {
   state = {
-    users: [],
+    user: '',
     name:'',
     lengthofperiod: '',
-    lastdateoflastperiod: ''
+    lastdateoflastperiod: '',
   };
 
   componentDidMount() {
     console.log("works!")
-    this.loadUsers();
+    this.loadUser(this.state.user._id);
   }
 
-  loadUsers = () => {
-    API.getUsers()
+  loadUser = id => {
+    API.getUser(id)
       .then(res =>
-        this.setState({ users: res.data,  name:'',lengthofperiod: '', lastdateoflastperiod: ''}, console.log(res.data[0].name))
+        this.setState({ user: res.data,  name:'',lengthofperiod: '', lastdateoflastperiod: ''}, console.log("CURRENT USER ID: "+res.data._id), window.open("/profile/" + res.data._id, "_self"))
         )
       .catch(err => console.log(err))
   }
   
-
   handleInputChange = event => {
     const { name, value } = event.target; 
     console.log(name, value)
@@ -42,9 +41,9 @@ class Profile extends Component {
         lengthofperiod: this.state.lengthofperiod,
         lastdateoflastperiod: this.state.lastdateoflastperiod
       })
-        .then(res => this.loadUsers())
-        .catch(err => console.log(err));
-    }
+        .then(res => this.loadUser(res.data._id))
+        .catch(err => console.log(err))
+      }
   };
 
   render() {
@@ -83,19 +82,6 @@ class Profile extends Component {
               Submit Your Info
             </FormBtn>
           </form>
-
-
-          <h1>Hello,</h1>
-                {this.state.users.map(user => (
-                  <div key={user._id}> 
-                      <strong>
-                        {user.name} 
-        
-                      </strong>
-                  </div>
-              ))}
-
-
       </div>
    )
   }

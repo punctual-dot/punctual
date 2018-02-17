@@ -4,6 +4,7 @@ import { Accordion, AccordionItem } from "react-sanfona";
 import "./toggle.css";
 import Food from "../../pages/Food";
 import Symptoms from "../../components/Symptoms/Symptoms.js"
+import Message from "../../components/Symptoms/"
 
 class Toggle extends Component {
   render() {
@@ -19,8 +20,6 @@ class Toggle extends Component {
           <AccordionItem title={`Symptoms`} className={`symptoms`}>
             <Symptoms />
           </AccordionItem>
-
-          {/*Foods*/}
           <AccordionItem title={`Food`} className={`food`}>
             <Food />
           </AccordionItem>

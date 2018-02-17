@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const usersController = require("../../controllers/usersController");
 
-// Matches with "/api/users"
+// Matches with "/api/profile"
 router.route("/")
   .get(usersController.findAll)
   .post(usersController.create);
@@ -9,5 +9,6 @@ router.route("/")
 router
   .route("/:id")
   .get(usersController.findById)
+  .post(usersController.addSymptom)
 
 module.exports = router;
