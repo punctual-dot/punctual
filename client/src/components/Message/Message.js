@@ -7,7 +7,8 @@ class Message extends React.Component {
         name:'',
         email:'',
         lengthofperiod: '',
-        lastdateoflastperiod: ''
+        lastdateoflastperiod: '',
+        lengthofcycle:''
       };
     
       componentDidMount() {

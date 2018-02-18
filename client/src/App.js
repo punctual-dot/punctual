@@ -33,11 +33,10 @@ const App = () => (
           return <Callback {...props} />;
         }}
       />
-      <Jumbotron />
       <Route exact path="/profile" component={Profile} />
       {/* <Route exact path="/food" component={Food} />
       <Route exact path="/bigcalendar" component={BigCalendar} /> */}
-      <Route exact path="/profile/:id" component={Toggle} />
+      <Route path="/profile/:id" component={Toggle} />
     </div>
   </Router>
 );
