@@ -28,7 +28,7 @@ module.exports = {
 	addSymptom: function (req, res) {
 		// Create a new Note in the db
 		db.User
-			.findOneAndUpdate(req.params.id , { $push: { symptoms: dbSymptom._id } }).then(dbModel => res.json(dbModel))
+			.findOneAndUpdate(req.params.id , { $push: { symptoms: db.Symptom._id } }).then(dbModel => res.json(dbModel))
 			.catch(err => res.status(422).json(err));
 }
 }
