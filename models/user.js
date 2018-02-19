@@ -9,12 +9,7 @@ const userSchema = new Schema({
   lengthofcycle: {type: Number, required: true},
 
   symptoms: [
-    {
-      // Store ObjectIds in the array
-      type: Schema.Types.ObjectId,
-      // The ObjectIds will refer to the ids in the Note model
-      ref: "Symptom"
-    }
+    {dateofsymptom: {type: Date}, symptom: {type: String}, symptomid: {type: String}}
   ]
 });
 

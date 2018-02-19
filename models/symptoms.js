@@ -3,10 +3,11 @@ const Schema = mongoose.Schema;
 
 const symptomSchema = new Schema({
 
-  symptoms: { type: String },
+  symptom: { type: String },
   advice: { type: String },
-  food: { type: String },
-  dateofsymptom: { type: Date }
+  foods: [
+    {type: String}
+  ]
 });
 
 const Symptom = mongoose.model("Symptom", symptomSchema);

@@ -22,13 +22,22 @@ module.exports = {
 		  .findById(req.params.id)
 		  .then(dbModel => res.json(dbModel))
 			.catch(err => res.status(422).json(err));
-			console.log("PARAMS" + req)
 	  },
 
 	addSymptom: function (req, res) {
-		// Create a new Note in the db
 		db.User
-			.findOneAndUpdate(req.params.id , { $push: { symptoms: db.Symptom._id } }).then(dbModel => res.json(dbModel))
-			.catch(err => res.status(422).json(err));
-}
+			.findOneAndUpdate(req.params.id, {
+				$push: {
+					symptoms: [
+						{symptom: req.body.symptoms[0].symptom, dateofsymptom: req.body.symptoms[0].dateofsymptom, symptomid: req.body.symptoms[0].symptomid }
+					]
+				}
+			},	{
+				sort: {_id: -1},
+				upsert: true
+			  }, (err, result) => {
+				if (err) return res.send(err)
+				res.send(result)
+			  })
+	}
 }
