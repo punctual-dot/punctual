@@ -1,13 +1,13 @@
 const router = require("express").Router();
-const symptomController = require("../../controllers/symptomsController");
+const symptomsController = require("../../controllers/symptomsController");
 
-// Matches with "/api/users"
+// Matches with "/api/profile"
 router.route("/")
-  .get(symptomController.findAll)
-  .post(symptomController.create);
+  .get(symptomsController.findAll)
+  .post(symptomsController.create);
 
 router
   .route("/:id")
-  .get(symptomController.findById)
+  .get(symptomsController.findById)
 
 module.exports = router;

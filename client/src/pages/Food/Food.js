@@ -1,5 +1,6 @@
 import React from 'react';
 import Request from 'superagent';
+import "./food.css";
 
 
 class Food extends React.Component {
@@ -12,6 +13,14 @@ class Food extends React.Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
         this.search = this.search.bind(this);    
+    }
+
+    componentDidUpdate() {
+        console.log(this.props.foodQuery);
+        console.log('food component updated!');
+        if(this.props.newQuery) {
+            this.search(this.props.foodQuery);
+        }
     }
     
     handleInputChange = event => {
@@ -30,7 +39,7 @@ class Food extends React.Component {
     };
 
     search(searchQuery) {
-        const url = `https://api.yummly.com/v1/api/recipes?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b&q=${searchQuery}&maxResult=8`
+        const url = `https://api.yummly.com/v1/api/recipes?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b&q=${searchQuery}&maxResult=6`
         Request.get(url).then((response) => {
             this.setState({
                 recipes: [],
@@ -51,33 +60,46 @@ class Food extends React.Component {
                         recipes:this.state.recipes
                     })
                 });
-            })
+            });
+
         })
+
+        this.props.setNewQuery(false);
     }
     
     render(){
         return (
-            <div>
-                <form>
+            <div className="whole-food-div">
+                <h1 className="calloutquotes">You are what you eat,</h1>
+                <h1 className="calloutquotes">so let's make something delicious.</h1>
+                <form className="search-form">
+                    <p> This food is {this.props.foodQuery}</p>
                     <label>
-                        searchQuery
+                        Search Food
                         <input value={this.state.searchQuery} onChange={this.handleInputChange} type="text" name="searchQuery" />
                     </label>
                         <input type="submit" value="Submit" onClick={this.handleFormSubmit} />
                 </form>
                 
                 {this.state.recipes.map(recipe => (
-                    <div>
-                        <img src={recipe.fullImageUrl} alt = "fullsize" />
+                    <div className="container">
+                        <img src={recipe.fullImageUrl} alt = "fullsize" className="image"/>
+                            <div className="overlay">
+                                <div className="text"> 
+                                    <h2 className="ingredients">
+                                        ingredients
+                                    </h2>
+                                          {recipe.ingredients.map(ingredient =>(
+                                            <ul className="list">
+                                                <li>{ingredient}</li>
+                                            </ul>
+                                        ))} 
+                                </div>
+                            </div>
+                        
                         <a href={recipe.sourceUrl} className="active" target="_blank">{recipe.recipeName}</a>
-                
-                        <h3>Ingredients</h3>
-                        {recipe.ingredients.map(ingredient =>(
-                            <ul>
-                            <li>{ingredient}</li>
-                            </ul>
-                        ))} 
-                    </div>
+                      </div>
+
                 ))}
         </div>
         )

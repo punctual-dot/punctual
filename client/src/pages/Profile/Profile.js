@@ -1,31 +1,32 @@
 import React, { Component } from "react";
 import API from "../../utils/API"
 import { Input, FormBtn } from "../../components/Form";
-
+import "./profile.css"
+import Jumbotron from "../../components/Jumbotron/Jumbotron.js"
 
 
 class Profile extends Component {
   state = {
-    users: [],
+    user: '',
     name:'',
     lengthofperiod: '',
-    lastdateoflastperiod: ''
+    lastdateoflastperiod: '',
+    lengthofcycle:''
   };
 
   componentDidMount() {
     console.log("works!")
-    this.loadUsers();
+    this.loadUser(this.state.user._id);
   }
 
-  loadUsers = () => {
-    API.getUsers()
+  loadUser = id => {
+    API.getUser(id)
       .then(res =>
-        this.setState({ users: res.data,  name:'',lengthofperiod: '', lastdateoflastperiod: ''}, console.log(res.data[0].name))
+        this.setState({ user: res.data,  name:'',lengthofperiod: '', lastdateoflastperiod: '', lengthofcycle: ''}, console.log("CURRENT USER ID: "+res.data._id), window.open("/profile/" + res.data._id, "_self"))
         )
       .catch(err => console.log(err))
   }
   
-
   handleInputChange = event => {
     const { name, value } = event.target; 
     console.log(name, value)
@@ -40,63 +41,72 @@ class Profile extends Component {
       API.saveUser({
         name: this.state.name,
         lengthofperiod: this.state.lengthofperiod,
-        lastdateoflastperiod: this.state.lastdateoflastperiod
+        lastdateoflastperiod: this.state.lastdateoflastperiod,
+        lengthofcycle: this.state.lengthofcycle
       })
-        .then(res => this.loadUsers())
-        .catch(err => console.log(err));
-    }
+        .then(res => this.loadUser(res.data._id))
+        .catch(err => console.log(err))
+      }
   };
 
   render() {
     return (
     <div>
-
+      <Jumbotron />
+      <div id="form" className="row form-row">
+        <div className="col-lg-8 col-lg-offset-2">
+          <div className="container-fluid form">
+            <h1 className="header-intro">Give us a little info about you & your period...</h1>
+            <p className="main-text"><em>and we'll help you keep all the right plates spinning</em></p>
             <form>
-            <label>What 's your name?</label>
-            <Input
-              value={this.state.name}
-              onChange={this.handleInputChange}
-              name="name"
-              placeholder="Required"
-            />
-          
-            <label>How long does your period last on average?</label>
-            <Input
-              type="number"
-              value={this.state.lengthofperiod}
-              onChange={this.handleInputChange}
-              name="lengthofperiod"
-              placeholder="Days"
-            />
-            <label>When was the last date of your last period?</label>
-            <Input
+              <label className="form-questions">Hey Girl, what's your name?</label>
+              <Input
+                value={this.state.name}
+                onChange={this.handleInputChange}
+                name="name"
+                placeholder="Required"
+              />
 
-            value={this.state.lastdateoflastperiod}
-              onChange={this.handleInputChange}
-              name="lastdateoflastperiod"
-              type="date"
-            />
-            <FormBtn
-              disabled={!(this.state.name && this.state.lengthofperiod && this.state.lengthofperiod)}
-              onClick={this.handleFormSubmit}
-              >
-              Submit Your Info
-            </FormBtn>
-          </form>
+              <label className="form-questions">how long is your cycle?</label>
+              <Input
 
+              value={this.state.lengthofcycle}
+                onChange={this.handleInputChange}
+                name="lengthofcycle"
+                type="number"
+                placeholder="Days"
+              />  
 
-          <h1>Hello,</h1>
-                {this.state.users.map(user => (
-                  <div key={user._id}> 
-                      <strong>
-                        {user.name} 
-        
-                      </strong>
-                  </div>
-              ))}
+              <label className="form-questions">How long does this chick usually stick around?</label>
+              <Input
+                type="number"
+                value={this.state.lengthofperiod}
+                onChange={this.handleInputChange}
+                name="lengthofperiod"
+                placeholder="Days"
+              />
+              <label className="form-questions">When was the last time she came to visit?</label>
+              <Input
 
+              value={this.state.lastdateoflastperiod}
+                onChange={this.handleInputChange}
+                name="lastdateoflastperiod"
+                type="date"
+              />
 
+              <FormBtn className="submit-button"
+                disabled={!(this.state.name && this.state.lengthofcycle && this.state.lengthofperiod && this.state.lastdateoflastperiod)}
+                onClick={this.handleFormSubmit}
+                >
+                Submit
+              </FormBtn>
+            </form>
+          </div>
+        </div>
       </div>
+
+     </div>    
+
    )
   }
 }

@@ -21,6 +21,23 @@ module.exports = {
 		db.User
 		  .findById(req.params.id)
 		  .then(dbModel => res.json(dbModel))
-		  .catch(err => res.status(422).json(err));
+			.catch(err => res.status(422).json(err));
 	  },
+
+	addSymptom: function (req, res) {
+		db.User
+			.findOneAndUpdate(req.params.id, {
+				$push: {
+					symptoms: [
+						{symptom: req.body.symptoms[0].symptom, dateofsymptom: req.body.symptoms[0].dateofsymptom, symptomid: req.body.symptoms[0].symptomid }
+					]
+				}
+			},	{
+				sort: {_id: -1},
+				upsert: true
+			  }, (err, result) => {
+				if (err) return res.send(err)
+				res.send(result)
+			  })
+	}
 }

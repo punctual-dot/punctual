@@ -11,4 +11,13 @@ export default {
   getUser: function(id) {
     return axios.get("/api/profile/" + id);
   },
+  addSymptomtoUser: function(id, symptomData) {
+    return axios.post("/api/profile/" + id, symptomData)
+  },
+  getSymptoms: function() {
+    return axios.get("/api/symptoms");
+  },
+  getSymptom: function(id) {
+    return axios.get("/api/symptoms/"+ id);
+  },
 };
