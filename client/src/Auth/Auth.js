@@ -7,7 +7,7 @@ export default class Auth {
   auth0 = new auth0.WebAuth({
     domain: 'punctual.auth0.com',
     clientID: '2T0gEcUzZnl-zvU46S5Y41n_1lX-TdB5',
-    redirectUri: 'https://powerful-shore-33739.herokuapp.com/callback',
+    redirectUri: 'http://localhost:3000/callback',
     audience: 'https://punctual.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid'
