@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API"
-import  {FormBtn} from "../../components/Form";
+import {FormBtn} from "../../components/Form";
 
 let UserId = window.location.pathname.replace('/profile/','');
 
@@ -19,6 +19,7 @@ class Symptoms extends Component {
     this.loadSymptoms = this.loadSymptoms.bind(this)
     this.loadSymptom = this.loadSymptom.bind(this)
     this.handleFoodClick = this.handleFoodClick.bind(this)
+    this.loadUser = this.loadUser.bind(this)
 };
 
     componentDidMount() {
@@ -86,40 +87,39 @@ class Symptoms extends Component {
      }
 
 
-  render() {
-    return (
-    <div>
-	 	<form id="form">
-		 <select
-				 onChange={this.handleInputChange}
-                 name="symptom" className="form-control">
-                  {this.state.symptoms.map(symptom => (
-                  <option key={symptom._id} > 
-                        {symptom.symptom}
-                  </option>
-			  ))}
-              </select>
-            <FormBtn
-              disabled={!(this.state.symptom)}
-              onClick={this.handleFormSubmit}
-              >
-              Submit Your Info
-            </FormBtn>
-          </form>
-		
-		<div id="result">
-			{this.state.user.name}
-			{this.state.advice}
-			{this.state.foods.map(food => (
-				<ul>
-				<li className="item"> 
-				<a onClick={this.handleFoodClick} data-food={food}>{food}</a>
-				</li>
-				</ul>
-			))}
-		</div>
-    </div>
-   )
-  }
+    render() {
+        return (
+            <div>
+                <form id="form">
+                    <select
+				        onChange={this.handleInputChange}
+                        name="symptom" className="form-control">
+                        {this.state.symptoms.map(symptom => (
+                            <option key={symptom._id} > 
+                                {symptom.symptom}
+                            </option>
+                        ))}
+                    </select>
+                    <FormBtn
+                        disabled={!(this.state.symptom)}
+                        onClick={this.handleFormSubmit} >
+                            Submit Your Info
+                    </FormBtn>
+                </form>
+    		
+                <div id="result">
+                    {this.state.user.name}
+                    {this.state.advice}
+                    {this.state.foods.map(food => (]
+    				    <ul>    
+                            <li className="item"> 
+    				            <a onClick={this.handleFoodClick} data-food={food}>{food}</a>
+    				        </li>
+    				    </ul>
+    			     ))}
+                </div>
+            </div>
+        )
+    }
 }
 export default Symptoms;
