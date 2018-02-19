@@ -2,15 +2,17 @@
 
 import auth0 from 'auth0-js';
 import history from '../history';
+import { AUTH_CONFIG } from './auth0-variables';
 
 export default class Auth {
   auth0 = new auth0.WebAuth({
-    domain: 'punctual.auth0.com',
-    clientID: '2T0gEcUzZnl-zvU46S5Y41n_1lX-TdB5',
-    redirectUri: 'http://localhost:3000/callback',
-    audience: 'https://punctual.auth0.com/userinfo',
+    domain: AUTH_CONFIG.domain,
+    clientID: AUTH_CONFIG.clientId,
+    redirectUri: AUTH_CONFIG.callbackUrl,
+    audience: `https://${AUTH_CONFIG.domain}/userinfo`,
     responseType: 'token id_token',
     scope: 'openid'
+
   });
 
   login() {
