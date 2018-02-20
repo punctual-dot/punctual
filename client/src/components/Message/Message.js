@@ -1,48 +1,37 @@
-import React from "react";
+import React, { Component } from "react";
 import API from "../../utils/API"
+import moment from "moment";
 
-class Message extends React.Component {
-    state = {
-        users: [],
-        name:'',
-        email:'',
-        lengthofperiod: '',
-        lastdateoflastperiod: '',
-        lengthofcycle:''
-      };
-    
-      componentDidMount() {
-        console.log("works!")
-        this.loadUsers();
-      }
-    
-      loadUsers = () => {
-        API.getUsers()
-          .then(res =>
-            this.setState({ users: res.data,  name:'',email:'',lengthofperiod: '', lastdateoflastperiod: ''}, console.log(res.data[0].name))
-            )
-          .catch(err => console.log(err))
-      }
+let userId = window.location.pathname.replace('/profile/','');
 
-    render() {
-        return (
-        <div>
-            <h1>Hello,</h1>
-            {this.state.users.map(user => (
-                  <div key={user._id}> 
-                      <strong>
-                        {user.name} 
-                        {user.email}
-                      </strong>
-                  </div>
-              ))}
-        </div>
-        )
+class Message extends Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            user:''
+        }
+        this.loadUser = this.loadUser.bind(this)
+    };
+
+    componentDidMount() {
+        this.loadUser(userId);
 
     }
 
-
-
-
+    loadUser = id => {
+        API.getUser(userId)
+        .then(res =>
+            this.setState({user: res.data}, console.log(res.data)))
+        .catch(err => console.log(err))
+    }
+    render() {
+        return (
+            <div>
+                <div id="result">
+                    Hello, {this.state.user.name}. Your last date of period was on {moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}. Since your cycle lenght is about {this.state.user.lengthofcycle} days. We predict that your first day of next period will come on {moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}
+             </div>
+            </div>
+        )
+    }
 }
-export default Message;
+export default Message; 

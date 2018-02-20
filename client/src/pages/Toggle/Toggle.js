@@ -4,7 +4,7 @@ import { Accordion, AccordionItem } from "react-sanfona";
 import "./toggle.css";
 import Food from "../../pages/Food";
 import Symptoms from "../../components/Symptoms/Symptoms.js"
-import Message from "../../components/Symptoms/"
+import Message from "../../components/Message/"
 import Jumbotron from "../../components/Jumbotron/Jumbotron.js";
 import {Images} from "../../components/Images/Images.js"
 
@@ -82,6 +82,7 @@ class Toggle extends Component {
           {/*Calendar*/}
           <AccordionItem title={`Cycle`} className={`cycle`}>
             <BigCalendar />
+            <Message />
           </AccordionItem>
 
           {/*Symptoms*/}
