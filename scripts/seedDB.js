@@ -38,7 +38,7 @@ const symptomSeed = [
       "Leafy green vegetables are a superfood and one of the things you should always have in your diet. During your period they can help with cramps and be a great source of the calcium you need, as mentioned above.",
     foods: ["Kale", "Walnuts", "Mushrooms", "Tomatoes"]
   },
-  
+
   {
     symptom: "Moody",
     advice:
@@ -46,7 +46,7 @@ const symptomSeed = [
     foods:
       ["Black Beans", "Artichokes", "Spinach", "Cashews"]
   },
-  
+
   {
     symptom: "Tired",
     advice:
@@ -55,6 +55,7 @@ const symptomSeed = [
   }
 ];
 
+<<<<<<< Updated upstream
 db.Symptom
     .remove({})
   .then(() => db.Symptom.collection.insertMany(symptomSeed))
@@ -66,3 +67,15 @@ db.Symptom
     console.error(err);
     process.exit(1);
   });
+=======
+// db.Symptom.remove({})
+//   .then(() => db.Symptoms.collection.insertMany(symptomsSeed))
+//   .then(data => {
+//     console.log(data.insertedIds.length + " records inserted!");
+//     process.exit(0);
+//   })
+//   .catch(err => {
+//     console.error(err);
+//     process.exit(1);
+//   });
+>>>>>>> Stashed changes
