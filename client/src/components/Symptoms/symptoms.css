@@ -1,0 +1,56 @@
+.symptom-section{
+	height: 400px;
+
+}
+
+
+.calloutquotes-symptoms{
+	   font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 30px;
+   text-align: center;
+    line-height: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #6e64c5;
+    letter-spacing: .2px;
+    height: 12px;
+    font-style: italic;
+    margin-top: 0;
+    padding-bottom: 60px;
+    padding-top: 10px
+
+}
+
+.nameofuser{
+		   font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 20px;
+   text-align: center;
+    line-height: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #6e64c5;
+    letter-spacing: 2px;
+    height: 12px;
+    margin-top: 0;
+    padding-bottom: 30px;
+    margin-top: 80px
+}
+
+.symptom-resultstext{
+		   font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+ font-style: italic;
+ font-size: 16px;
+ line-height: 22px;
+  letter-spacing: .2px;
+      font-weight: 300;
+
+
+}
+
+.item{
+	display: inline-block;
+}
+
+
+
+

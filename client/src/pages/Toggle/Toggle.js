@@ -5,8 +5,9 @@ import "./toggle.css";
 import Food from "../../pages/Food";
 import Symptoms from "../../components/Symptoms/Symptoms.js"
 import Message from "../../components/Message/"
-import Jumbotron from "../../components/Jumbotron/Jumbotron.js";
+import Jumbotronquote from "../../components/Jumbotronquote/Jumbotronquote.js";
 import {Images} from "../../components/Images/Images.js"
+import Profile from "../Profile/"
 
 class Toggle extends Component {
   /* create state for symptoms results*/
@@ -77,7 +78,24 @@ class Toggle extends Component {
      
       <div>
     {/*change out to make sense with this page*/}
-       <Jumbotron />
+      
+
+
+      <div className="container-fluid summary-header">
+      <div className="row">
+  
+            <img src="https://i.imgur.com/kVUM7Er.jpg" className="quote" alt="quote-background" width="100%vw" height="auto"></img>
+            <h1 className="toggle-quote"> Let's get you feeling like your big bad self again, shall we? </h1>
+      
+      </div>
+      </div>
+          {/*<div className="jumbotron jumbotron-fluid">
+            <div className="container">
+
+              <h1 className="display-3">Fluid jumbotron</h1>
+              <p className="lead">Let's get you feeling like your big bad self again, shall we?</p>
+            </div>
+          </div>*/}
         <Accordion>
           {/*Calendar*/}
           <AccordionItem title={`Cycle`} className={`cycle`}>
@@ -107,9 +125,8 @@ class Toggle extends Component {
             />
           </AccordionItem>
           {/*Myths*/}
-          <AccordionItem title={`Myths`} className={`myths`}>
+          <AccordionItem title={`Myths`} className={`myths`} >
           <h1>Click on a country's flag to find out an interesting period myth!</h1>
-
           {this.state.buttons.map(button => (
             <Images clickMe={this.clickMe} url={button.url} country={button.country} myth={button.myth} />
             ))}

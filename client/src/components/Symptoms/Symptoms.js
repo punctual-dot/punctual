@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API"
 import {FormBtn} from "../../components/Form";
+import "./symptoms.css";
 
 let userId = window.location.pathname.replace('/profile/','');
 
@@ -89,34 +90,43 @@ class Symptoms extends Component {
 
     render() {
         return (
-            <div>
-                <form id="form">
-                    <select
-				        onChange={this.handleInputChange}
-                        name="symptom" className="form-control">
-                        {this.state.symptoms.map(symptom => (
-                            <option key={symptom._id} > 
-                                {symptom.symptom}
-                            </option>
-                        ))}
-                    </select>
-                    <FormBtn
-                        disabled={!(this.state.symptom)}
-                        onClick={this.handleFormSubmit} >
-                            Submit Your Info
-                    </FormBtn>
-                </form>
-    		
-                <div id="result">
-                    {this.state.user.name}
-                    {this.state.advice}
-                    {this.state.foods.map(food => (
-    				    <ul>    
-                            <li className="item"> 
-    				            <a onClick={this.handleFoodClick} data-food={food}>{food}</a>
-    				        </li>
-    				    </ul>
-    			     ))}
+
+              <div id="form" className="row">
+                <div className="col-lg-8 col-lg-offset-2">
+                    <div className="container-fluid form">
+                        <div className="symptom-section">
+                            <h1 className="calloutquotes-symptoms">How are you feeling today?</h1>
+                            <form id="form">
+                                <select
+            				        onChange={this.handleInputChange}
+                                    name="symptom" className="form-control">
+                                    {this.state.symptoms.map(symptom => (
+                                        <option key={symptom._id} > 
+                                            {symptom.symptom}
+                                        </option>
+                                    ))}
+                                </select>
+                                <FormBtn
+                                    className="symptom-button"
+                                    disabled={!(this.state.symptom)}
+                                    onClick={this.handleFormSubmit} >
+                                        Submit
+                                </FormBtn>
+                            </form>
+                		
+                            <div id="result">
+                                <h2 className="nameofuser">{this.state.user.name}</h2>
+                                <p className="symptom-resultstext">{this.state.advice}</p>
+                                {this.state.foods.map(food => (
+                				       
+                                      <p className="item"> 
+                				            <a onClick={this.handleFoodClick} data-food={food}>{food}</a>
+                				        </p>
+                				 
+                			     ))}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

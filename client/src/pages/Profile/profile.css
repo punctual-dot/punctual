@@ -56,7 +56,8 @@ height: 100%;
 	font-style: italic;
 	font-size: 16px;
 	text-transform: uppercase;
-	word-spacing: 1px
+	word-spacing: 1px;
+	margin-left:0
 
 
 }
@@ -67,8 +68,10 @@ height: 100%;
 	text-transform: uppercase;
     letter-spacing: 1px;
     background: #22b24c00;
-    color: white;
+    color: #82E1D1;
     border-color: #82E1D1;
+    margin-top: 15px;
+    float: left;
    }
 
 .btn.disabled, .btn[disabled], fieldset[disabled] .btn {
