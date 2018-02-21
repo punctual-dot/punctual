@@ -57,7 +57,7 @@ class Symptoms extends Component {
 
 
     handleFormSubmit = (event, id)=> {
-	event.preventDefault();
+	   event.preventDefault();
     this.loadUser(this.state.user._id)
         if (this.state.symptom) {
             for (var i=0; i < this.state.symptoms.length; i ++ ) {
@@ -81,7 +81,7 @@ class Symptoms extends Component {
     };
 
     handleFoodClick = event => {
-    event.preventDefault();
+        event.preventDefault();
         let food = event.target.dataset.food;
         this.props.setFood(food);
     }

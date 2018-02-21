@@ -3,51 +3,57 @@ import API from "../../utils/API"
 import { Input, FormBtn } from "../../components/Form";
 import "./profile.css"
 import Jumbotron from "../../components/Jumbotron/Jumbotron.js"
+import moment from "moment";
 
 
 class Profile extends Component {
-  state = {
-    user: '',
-    name:'',
-    lengthofperiod: '',
-    lastdateoflastperiod: '',
-    lengthofcycle:''
-  };
+    state = {
+        user: '',
+        name:'',
+        lengthofperiod: '',
+        lastdateoflastperiod: '',
+        lengthofcycle:''
+    };
 
-  componentDidMount() {
-    console.log("works!")
-    this.loadUser(this.state.user._id);
-  }
+    componentDidMount() {
+        this.loadUser(this.state.user._id);
+    }
 
-  loadUser = id => {
-    API.getUser(id)
-      .then(res =>
-        this.setState({ user: res.data,  name:'',lengthofperiod: '', lastdateoflastperiod: '', lengthofcycle: ''}, console.log("CURRENT USER ID: "+res.data._id), window.open("/profile/" + res.data._id, "_self"))
-        )
-      .catch(err => console.log(err))
-  }
-  
-  handleInputChange = event => {
-    const { name, value } = event.target; 
-    console.log(name, value)
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.name && this.state.lengthofperiod && this.state.lastdateoflastperiod) {
-      API.saveUser({
-        name: this.state.name,
-        lengthofperiod: this.state.lengthofperiod,
-        lastdateoflastperiod: this.state.lastdateoflastperiod,
-        lengthofcycle: this.state.lengthofcycle
-      })
-        .then(res => this.loadUser(res.data._id))
+    loadUser = id => {
+        API.getUser(id)
+        .then(res =>
+            this.setState({ 
+                user: res.data,  
+                name:'',
+                lengthofperiod: '', 
+                lastdateoflastperiod: '', 
+                lengthofcycle: ''
+            }, window.open("/profile/" + res.data._id, "_self")))
         .catch(err => console.log(err))
-      }
-  };
+    }
+  
+    handleInputChange = event => {
+        const { name, value } = event.target; 
+        console.log(name, value)
+        this.setState({
+            [name]: value
+        });
+    };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.name && this.state.lengthofperiod && this.state.lastdateoflastperiod) {
+            API.saveUser({
+                name: this.state.name,
+                lengthofperiod: this.state.lengthofperiod,
+                lastdateoflastperiod: this.state.lastdateoflastperiod,
+                lengthofcycle: this.state.lengthofcycle, 
+                firstdayofcycle: moment(this.state.lastdateoflastperiod).subtract(this.state.lengthofperiod, "day")
+            })
+            .then(res => this.loadUser(res.data._id))
+            .catch(err => console.log(err))
+        }
+    };
 
   render() {
     return (

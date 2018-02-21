@@ -3,12 +3,12 @@ const usersController = require("../../controllers/usersController");
 
 // Matches with "/api/profile"
 router.route("/")
-  .get(usersController.findAll)
-  .post(usersController.create);
+	.get(usersController.findAll)
+ 	.post(usersController.create);
 
 router
-  .route("/:id")
-  .get(usersController.findById)
-  .post(usersController.addSymptom)
+  	.route("/:id")
+  	.get(usersController.findById)
+  	.post(usersController.addSymptom)
 
 module.exports = router;

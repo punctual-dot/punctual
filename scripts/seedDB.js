@@ -55,9 +55,8 @@ const symptomSeed = [
   }
 ];
 
-<<<<<<< Updated upstream
 db.Symptom
-    .remove({})
+  .remove({})
   .then(() => db.Symptom.collection.insertMany(symptomSeed))
   .then(data => {
     console.log(data.insertedIds.length + " records inserted!");
@@ -67,15 +66,4 @@ db.Symptom
     console.error(err);
     process.exit(1);
   });
-=======
-// db.Symptom.remove({})
-//   .then(() => db.Symptoms.collection.insertMany(symptomsSeed))
-//   .then(data => {
-//     console.log(data.insertedIds.length + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
->>>>>>> Stashed changes
+
