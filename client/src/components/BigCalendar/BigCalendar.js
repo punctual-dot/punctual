@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import BigCalendar from "react-big-calendar";
 import moment from "moment";
 import API from "../../utils/API";
@@ -28,54 +28,68 @@ BigCalendar.momentLocalizer(moment);
 //   );
 // }
 
-let userId = window.location.pathname.replace('/profile/','');
+let userId = window.location.pathname.replace("/profile/", "");
 
 class MyCalendar extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            user: '',
-            myevents: []
-        }
-        this.loadUser = this.loadUser.bind(this)
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: "",
+      myevents: []
     };
+    this.loadUser = this.loadUser.bind(this);
+  }
 
-    componentDidMount () {
-        this.loadUser(userId);
-    }  
+  componentDidMount() {
+    this.loadUser(userId);
+  }
 
-    loadUser = id => {
-        API.getUser(userId)
-        .then(res =>
-            this.setState({user: res.data, myevents: [
-                {
-                    //symptoms: "Period",
-                    //icon: "https://image.flaticon.com/icons/svg/150/150654.svg",
-                    allDay: true,
-                    start: moment(res.data.firstdayofcycle).add(1, "day"),
-                    end: moment(res.data.lastdateoflastperiod).add(1, "day")
-                },
-                {
-                    allDay: true,
-                    start: moment(res.data.lastdateoflastperiod).subtract(res.data.lengthofperiod, "day").add(res.data.lengthofcycle, "day").add(1, "day"),
-                    end: moment(res.data.lastdateoflastperiod).subtract(res.data.lengthofperiod, "day").add(res.data.lengthofcycle, "day").add(res.data.lengthofperiod, "day")
-                }
-            ]}, console.log(res.data)))
-        .catch(err => console.log(err))
-    }
-    
-    render() {
-        return (
-            <div>
-                <BigCalendar
-                    events={this.state.myevents}
-                    step={30}
-                    showMultiDayTimes
-                    //components={{ event: Event }}
-                />
-            </div>
-        );
-    };
+  loadUser = id => {
+    API.getUser(userId)
+      .then(res =>
+        this.setState(
+          {
+            user: res.data,
+            myevents: [
+              {
+                title: "Last Month's Period",
+                allDay: true,
+                start: moment(res.data.firstdayofcycle).add(1, "day"),
+                end: moment(res.data.lastdateoflastperiod).add(1, "day")
+              },
+              {
+                title: "Next Period, Maybe?",
+                allDay: true,
+                start: moment(res.data.lastdateoflastperiod)
+                  .subtract(res.data.lengthofperiod, "day")
+                  .add(res.data.lengthofcycle, "day")
+                  .add(1, "day"),
+                end: moment(res.data.lastdateoflastperiod)
+                  .subtract(res.data.lengthofperiod, "day")
+                  .add(res.data.lengthofcycle, "day")
+                  .add(res.data.lengthofperiod, "day")
+              }
+            ]
+          },
+          console.log(res.data)
+        )
+      )
+      .catch(err => console.log(err));
+  };
+  render() {
+    return (
+      <div>
+        <BigCalendar
+          events={this.state.myevents}
+          step={30}
+          showMultiDayTimes
+          onSelectEvent={event => alert(event.title)}
+          Components={{ event: Event }}
+          views={["month", "week"]}
+        />
+      </div>
+    );
+  }
 }
 
 export default MyCalendar;
