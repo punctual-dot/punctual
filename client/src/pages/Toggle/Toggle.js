@@ -41,14 +41,7 @@ class Toggle extends Component {
       
 
 
-      <div className="container-fluid summary-header">
-      <div className="row">
-  
-            <img src="https://i.imgur.com/NlehmTE.jpg" className="quote" alt="quote-background" width="100%vw" height="auto"></img>
-            <h1 className="toggle-quote"> Let's get you feeling like your big bad self again, shall we? </h1>
-      
-      </div>
-      </div>
+      <Jumbotronquote />
           {/*<div className="jumbotron jumbotron-fluid">
             <div className="container">
 

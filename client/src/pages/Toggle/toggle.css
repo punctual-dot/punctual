@@ -7,6 +7,7 @@
   font-style: italic;
   font-weight: lighter;
   padding-top: 25px;
+  z-index: 2
 }
 
 .cycle .react-sanfona-item-title {
