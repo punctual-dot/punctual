@@ -23,7 +23,7 @@ const handleAuthentication = (nextState, replace) => {
 const App = () => (
   <Router history={history}>
     <div>
-      {/*<Route exact path="/" component={Main} */}
+      
       <Route path="/" render={props => <AppAuth auth={auth} {...props} />} />
       <Route path="/home" render={props => <Main auth={auth} {...props} />} />
       <Route
@@ -33,6 +33,7 @@ const App = () => (
           return <Callback {...props} />;
         }}
       />
+      <Route exact path="/" component={Main} />
       <Route exact path="/profile" component={Profile} />
       {/* <Route exact path="/food" component={Food} />
       <Route exact path="/bigcalendar" component={BigCalendar} /> */}
