@@ -23,6 +23,7 @@ const handleAuthentication = (nextState, replace) => {
 const App = () => (
   <Router history={history}>
     <div>
+
       <Route path="/" render={props => <AppAuth auth={auth} {...props} />} />
       <Route path="/home" render={props => <Main auth={auth} {...props} />} />
       <Route

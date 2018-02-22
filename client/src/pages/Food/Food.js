@@ -51,7 +51,6 @@ class Food extends React.Component {
                 Request.get(url).then((response) => {
                     console.log("MATCH RESPONSE", response)
                     match.fullImageUrl = response.body.images[0].imageUrlsBySize["360"]
-
                     match.sourceUrl = response.body.source.sourceRecipeUrl;
                     this.state.recipes.push(
                         match
