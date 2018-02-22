@@ -50,7 +50,8 @@ class Food extends React.Component {
                 const url = `https://api.yummly.com/v1/api/recipe/${match.id}?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b`
                 Request.get(url).then((response) => {
                     console.log("MATCH RESPONSE", response)
-                    match.fullImageUrl = response.body.images[0].hostedLargeUrl
+                    match.fullImageUrl = response.body.images[0].imageUrlsBySize["360"]
+
                     match.sourceUrl = response.body.source.sourceRecipeUrl;
                     this.state.recipes.push(
                         match
