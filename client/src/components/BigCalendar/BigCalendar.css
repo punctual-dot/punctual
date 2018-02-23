@@ -1,8 +1,18 @@
 .rbc-event-content {
   background-color: #6e64c5;
   height: 25px;
+
 }
 
 .rbc-calendar {
   font-family: Lato, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+.rbc-event.rbc-selected{
+	background-color: #6e64c5
+}
+
+.rbc-event{
+	background-color: #6e64c5
 }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API"
 import moment from "moment";
+import "./Message.css";
 
 let userId = window.location.pathname.replace('/profile/','');
 
@@ -27,7 +28,7 @@ class Message extends Component {
             this.setState({user: res.data}, this.determineCycleStage(res.data.firstdayofcycle, moment.utc()), console.log(res.data)))
         .catch(err => console.log(err))
     }
-    
+
     determineCycleStage = (firstdayofcycle,today) => {
         if (moment(firstdayofcycle).isSame(today, "day")) {
             this.setState ({stage: "one"})
@@ -172,14 +173,29 @@ class Message extends Component {
     }
     render() {
         return (
-            <div>
-                <div id="result">
-                    Hello, {this.state.user.name}. Your last date of period was on {moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}. Since your cycle lenght is about {this.state.user.lengthofcycle} days. We predict that your first day of next period will come on {moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}. 
-                </div>
-                <div> 
-                    <h5>{this.handleStageResult(this.state.stage)}</h5>
+
+            <div>   
+                 <div id="form" className="row">
+                <div className="col-lg-8 col-lg-offset-2">
+                    <div className="container-fluid form">
+                        <div className="fact-section">
+                            <h1 className="title"> THE FACTS</h1>
+                                    <div className="result-text-first" id="result"> Hello, {this.state.user.name}! The date of your last period was {moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}. Since your cycle length is about {this.state.user.lengthofcycle} days, we predict that your next period will come on {moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}.</div>
+                  
+                                    <div className="extra-info">{this.handleStageResult(this.state.stage)}</div>
+                    
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            </div>
+
+
+
+  
+
+
         )
     }
 }

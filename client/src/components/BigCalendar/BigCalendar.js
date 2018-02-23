@@ -7,12 +7,6 @@ import "./BigCalendar.css";
 
 BigCalendar.momentLocalizer(moment);
 
-// 1- Import User Info from user db
-// 2- Pull (inital)first day of last period, length of period, length of cycle
-// 3- Show Event of that above
-// 4- Show subsequent periods moving foward based on calculations from 2
-// 5- Add drop icon to each event
-
 // function Event({ event }) {
 //   return (
 //     <span>
