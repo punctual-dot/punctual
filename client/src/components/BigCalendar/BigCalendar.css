@@ -9,6 +9,10 @@
 }
 
 
+.rbc-event.rbc-selected{
+	background-color: #6e64c5
+}
+
 .rbc-event{
 	background-color: #6e64c5
 }

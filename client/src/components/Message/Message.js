@@ -183,7 +183,7 @@ class Message extends Component {
                             <h1 className="title"> THE FACTS</h1>
                                     <div className="result-text-first" id="result"> Hello, {this.state.user.name}! The date of your last period was {moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}. Since your cycle length is about {this.state.user.lengthofcycle} days, we predict that your next period will come on {moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}.</div>
                   
-                                    <div className="extra-info">{this.handleStageResult(this.state.stage)} <button onClick={this.determineCycleStage}> Click </button></div>
+                                    <div className="extra-info">{this.handleStageResult(this.state.stage)}</div>
                     
                         </div>
                     </div>
