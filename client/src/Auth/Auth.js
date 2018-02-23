@@ -10,7 +10,7 @@ export default class Auth {
     redirectUri: 'http://localhost:3000/callback',
     audience: 'https://punctual.auth0.com/userinfo',
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: 'openid profile'
 
   });
 
