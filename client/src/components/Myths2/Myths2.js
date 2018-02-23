@@ -5,7 +5,7 @@ var createReactClass = require("create-react-class");
 
 var Carousel = require("nuka-carousel");
 
-const App = createReactClass({
+const Myths2 = createReactClass({
   mixins: [Carousel.ControllerMixin],
   render() {
     return (
@@ -21,4 +21,4 @@ const App = createReactClass({
   }
 });
 
-module.exports = App;
+module.exports = Myths2
