@@ -39,7 +39,7 @@ class Food extends React.Component {
     };
 
     search(searchQuery) {
-        const url = `https://api.yummly.com/v1/api/recipes?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b&q=${searchQuery}&maxResult=6`
+        const url = `https://api.yummly.com/v1/api/recipes?_app_id=f009d8ed&_app_key=51efe345d8aee0dfafd461250280bd9b&q=${searchQuery}&maxResult=8`
         Request.get(url).then((response) => {
             this.setState({
                 recipes: [],
@@ -70,13 +70,13 @@ class Food extends React.Component {
     render(){
         return (
             <div className="whole-food-div">
-                <h1 className="calloutquotes">You are what you eat,</h1>
-                <h1 className="calloutquotes">so let's make something delicious.</h1>
+                <h1 className="calloutquotes">You are what you eat, <br/> so let's make something delicious.</h1>
+              
                
                 
                 {this.state.recipes.map(recipe => (
                     <div style={{display: "inline-block"}}>
-                    <div className="container" style={{display: "inline-block", width:"100%", height:"100%"}}>
+                    <div className="container">
                         <img src={recipe.fullImageUrl} alt = "fullsize" className="image"/>
                             <div className="overlay">
                                 <div className="text"> 
@@ -97,11 +97,20 @@ class Food extends React.Component {
                 ))}
                  <form className="search-form">
                   
-                    <label>
-                        Search Food
-                        <input value={this.state.searchQuery} onChange={this.handleInputChange} type="text" name="searchQuery" />
-                    </label>
-                        <input type="submit" value="Submit" onClick={this.handleFormSubmit} />
+                    <div id="form" className="row">
+                        <div className="col-lg-8 col-lg-offset-2">
+                            <div className="container-fluid form">
+                                
+                                       <label>
+                                Search Food
+                                <input value={this.state.searchQuery} onChange={this.handleInputChange} type="text" name="searchQuery" />
+                                </label>
+                                <input type="submit" value="Submit" onClick={this.handleFormSubmit} />
+
+                               
+                            </div>
+                        </div>
+                    </div>
                 </form>
         </div>
         )
