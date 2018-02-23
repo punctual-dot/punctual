@@ -1,4 +1,4 @@
 export const AUTH_CONFIG = {
   domain: 'punctual.auth0.com',
-  clientId: '2T0gEcUzZnl-zvU46S5Y41n_1lX-TdB5',
+  clientId: 'yPspsbe0Dwjpi4WNUyNyN0PmiRAR1e6z',
   callbackUrl: 'https://punctualapp.herokuapp.com/callback'
