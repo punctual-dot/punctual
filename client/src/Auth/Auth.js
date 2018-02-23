@@ -5,10 +5,10 @@ import history from '../history';
 
 export default class Auth {
    auth0 = new auth0.WebAuth({
-    domain: 'punctual.auth0.com',
-    clientID: '2T0gEcUzZnl-zvU46S5Y41n_1lX-TdB5',
-    redirectUri: 'https://punctualapp.herokuapp.com/callback',
-    audience: 'https://punctual.auth0.com/userinfo',
+    domain: 'app88995703.auth0.com',
+    clientID: 'qbHy5QGeMo8oSIJqyNFKL8Af2xXz0AkJ',
+    redirectUri: 'https://stormy-headland-87409.herokuapp.com/callback',
+    audience: 'app88995703.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid'
 
