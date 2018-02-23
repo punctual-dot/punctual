@@ -15,7 +15,7 @@ class Myths extends Component {
 		     },{
 		        country: 'Poland',
 		        url:'http://img.freeflagicons.com/thumb/round_icon/poland/poland_64.png',
-		        myth: 'having sex while menstruating can kill your partner??'
+		        myth: 'having sex while menstruating can kill your partner!'
 
 		      },{
 		        country: 'Malaysia',
