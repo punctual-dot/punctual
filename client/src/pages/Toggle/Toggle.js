@@ -6,8 +6,6 @@ import Food from "../../pages/Food";
 import Symptoms from "../../components/Symptoms/Symptoms.js"
 import Message from "../../components/Message/"
 import Jumbotronquote from "../../components/Jumbotronquote/Jumbotronquote.js";
-import {Images} from "../../components/Images/Images.js"
-import Profile from "../Profile/"
 import Myths from "../../components/Myths/"
 
 class Toggle extends Component {
