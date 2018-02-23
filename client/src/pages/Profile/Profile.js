@@ -63,9 +63,9 @@ class Profile extends Component {
         <div className="col-lg-8 col-lg-offset-2">
           <div className="container-fluid form">
             <h1 className="header-intro">Give us a little info about you & your period...</h1>
-            <p className="main-text"><em>and we'll help you keep all the right plates spinning</em></p>
+            <p className="main-text"><em>and we'll help with the rest!</em></p>
             <form>
-              <label className="form-questions">Hey Girl, what's your name?</label>
+              <label className="form-questions">Hey! What's your name?</label>
               <Input
                 value={this.state.name}
                 onChange={this.handleInputChange}
@@ -73,7 +73,7 @@ class Profile extends Component {
                 placeholder="Required"
               />
 
-              <label className="form-questions">how long is your cycle?</label>
+              <label className="form-questions">How long is your cycle?</label>
               <Input
 
               value={this.state.lengthofcycle}
@@ -83,7 +83,7 @@ class Profile extends Component {
                 placeholder="Days"
               />  
 
-              <label className="form-questions">How long does this chick usually stick around?</label>
+              <label className="form-questions">How long does this thing usually stick around?</label>
               <Input
                 type="number"
                 value={this.state.lengthofperiod}
@@ -91,7 +91,7 @@ class Profile extends Component {
                 name="lengthofperiod"
                 placeholder="Days"
               />
-              <label className="form-questions">When was the last time she came to visit?</label>
+              <label className="form-questions">When was the last time it came to visit?</label>
               <Input
 
               value={this.state.lastdateoflastperiod}

@@ -171,41 +171,41 @@ class Message extends Component {
         let stageincycle = this.state.stage
         switch(stageincycle) {
             case "one":
-                return "Your period just started. With low estrogent, you may feel fatigue. Cramping is common. You should exercise gently in this stage";
+                return "Your period just started. With low estrogen, you may feel fatigue. Cramping is also common. You should exercise gently when in this stage.";
                 break;
             case "two":
-                return "Your period ends or about to end. Estrogen increases, energy rises! Feeling a little upbeat yeah?. It is a good time to push yourself through!";
+                return "Your period is over or about to end. Estrogen increases, and your energy rises! Feeling a little upbeat, yeah?. Now's a great time to put yourself out there!";
                 break;
             case "three":
-                return "Estrogen is UP! Your face looks more symmetrical, and wow your skin is GLOWING! Testosterone is up as well, so you feel that you are on top of the world. Good time to try new things!";
+                return "Estrogen is UP! Your face looks more symmetrical, and wow your skin is GLOWING! Testosterone is up as well, so you feel like you are on top of the world. Good time to try new things!";
                 break;
             case "four":
-                return "Estogen is at its peak. You are at your sexiest and most fertile. You may feel more optimistic and super social than usual. If so, go have fun!";
+                return "Estogen is at its peak. You are at your sexiest and most fertile. You may feel more optimistic and social than usual. If so, go have fun!";
                 break;
             case "five":
-                return "Ovaluation is here. Your ovary releases an egg. If it's not fertalized, it dissolves";
+                return "Ready for a baby? Because you're ovulating. This means your ovary releases an egg; get busy if you want that mini-me! If not, be extra careful...";
                 break;
             case "six":
-                return "Oh no, hormones change!. This may intensify your emotions and tiredness";
+                return "Oh no, your hormones are changing! This may intensify your emotions and tiredness.";
                 break;
             case "seven":
-                return "Estrogen drops. Testosterone and progesteron surge. Yeah, this means excess oil which leads to breakouts and sensitive skin. Eat healthy.";
+                return "Estrogen drops. Testosterone and progesteron surge. Yeah, this means excess oil which leads to breakouts and sensitive skin. Eat healthy, and check out that new face mask!";
                 break;
             case "eight":
-                return "Progesterone at its peak. You may feel bloated with low libido. Some might not feel like doing anything at all. Don't let PMS take over. Do some exercises!";
+                return "Progesterone is at its peak. You may feel bloated with low libido. Some might not feel like doing anything at all. Don't let PMS take over. Do some exercises! YOU CAN DO THIS!";
                     break;
             case "nine":
-                return "Breast soreness is common. Cut down on caffine and sugar intake. Stay hydrated";
+                return "Breast soreness is common. Cut down on caffine and sugar intake. Stay hydrated!";
                 break;
             default:
-                return "Update your period info or click the button to understand where you are in the period cycle"
+                return "Update your period info or click the button to understand where you are in your cycle"
         }
     }
     render() {
         return (
             <div>
                 <div id="result">
-                    Hello, {this.state.user.name}. Your last date of period was on {moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}. Since your cycle lenght is about {this.state.user.lengthofcycle} days. We predict that your first day of next period will come on {moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}. 
+                    Hello, {this.state.user.name}. The date of your last period was {moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}. Since your cycle length is about {this.state.user.lengthofcycle} days, we predict that your next period will come on {moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}. 
                 </div>
                 <div> 
                     <button onClick={this.determineCycleStage}> Click </button>

@@ -96,7 +96,7 @@ class Food extends React.Component {
 
                 ))}
                  <form className="search-form">
-                    <p> This food is {this.props.foodQuery}</p>
+                  
                     <label>
                         Search Food
                         <input value={this.state.searchQuery} onChange={this.handleInputChange} type="text" name="searchQuery" />
