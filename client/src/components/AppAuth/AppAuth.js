@@ -36,7 +36,7 @@ class AppAuth extends Component {
             {
               !isAuthenticated() && (
               <li className="item">
-                  <a href="/profile"
+                  <a href="#"
                     id="qsLoginBtn"
                     onClick={this.login.bind(this)}
                   >
@@ -48,7 +48,7 @@ class AppAuth extends Component {
             {
               isAuthenticated() && (
                 <li className="item">
-                  <a href="/"
+                  <a href="#"
                     id="qsLogoutBtn"
                     onClick={this.logout.bind(this)}
                   >
@@ -58,10 +58,8 @@ class AppAuth extends Component {
                 )
             }
             <li className="item"><a href="/profile">settings</a></li>
-            <img src="https://i.imgur.com/mWRPZ4W.png" className="nav-logo" alt="punctual logo" width="auto" height="70px"></img>
-
         </ul>
-
+        
       </div>
     );
   }

@@ -28,6 +28,7 @@ class Message extends Component {
             this.setState({user: res.data}, this.determineCycleStage(res.data.firstdayofcycle, moment.utc()), console.log(res.data)))
         .catch(err => console.log(err))
     }
+
     determineCycleStage = (firstdayofcycle,today) => {
         if (moment(firstdayofcycle).isSame(today, "day")) {
             this.setState ({stage: "one"})
@@ -173,9 +174,7 @@ class Message extends Component {
     render() {
         return (
 
-            <div>
-
-                
+            <div>   
                  <div id="form" className="row">
                 <div className="col-lg-8 col-lg-offset-2">
                     <div className="container-fluid form">
@@ -187,15 +186,10 @@ class Message extends Component {
                     
                         </div>
                     </div>
-
                 </div>
             </div>
 
             </div>
-
-
-
-  
 
 
         )
