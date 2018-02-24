@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Images.css";
 
 class Images extends Component {
 	constructor(props){
@@ -18,7 +19,8 @@ class Images extends Component {
 	  return (
 	    <div className="list-overflow-container">
 	    	<img onClick={ () => this.toggleVisibility() } src={ this.props.url } alt='country'></img>
-	    	{ this.state.isVisible && <div className="myths">{ 'In '+ this.props.country + ', they believe that ' + this.props.myth}</div> }	
+	    	{ this.state.isVisible && <div className="myths">{ 'In '+ this.props.country + ', some believe that ' + this.props.myth}</div> }
+	    	
 	    </div>
 	  );
 	}

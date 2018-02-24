@@ -92,7 +92,7 @@ class Profile extends Component {
                                     placeholder="Days"
                                 />
 
-                                <label className="form-questions">When was the last time it came to visit?</label>
+                                <label className="form-questions">When was the last time it came to visit (and overstay its welcome)?</label>
                                 <Input
                                     value={this.state.lastdateoflastperiod}
                                     onChange={this.handleInputChange}

@@ -141,34 +141,34 @@ class Message extends Component {
         let stageincycle = this.state.stage
         switch(stageincycle) {
             case "one":
-                return "Your period has just started. With low estrogent, you may feel fatigue. Cramping is common. You should exercise gently in this stage.";
+                return "Your period has just started (groan). With low estrogen, you may feel fatigued, and cramping is common. If you should exercise, do it gently.";
                 break;
             case "two":
-                return "Your period has ended or about to end. Estrogen is increasing, energy is rising! Feeling a little upbeat yeah?. It is a good time to push yourself through!";
+                return "FINALLY! Your period is over (or is about to end). Estrogen, and your energy, is rising! Feeling a little upbeat, yeah? So get out there!";
                 break;
             case "three":
-                return "Estrogen is UP! Your face looks more symmetrical, and wow your skin is GLOWING! Testosterone is up as well, so you feel that you are on top of the world. This is a good time to try new things!";
+                return "Your estrogen is HIGH! Your face looks more symmetrical, and daaang, your skin is GLOWING! Testosterone is up as well, so you're feeling like you're on top of the world. Now's a good time to try new things! Skydiving, anyone?";
                 break;
             case "four":
-                return "At this stage of your cycle, estogen is at its peak. You are at your sexiest and most fertile. You may feel more optimistic and super social than usual. Make sure to have fun!";
+                return "Estogen is at its peak. You are at your sexiest and most fertile. You may feel more optimistic and social than usual. Now's the time to get out and have some fun!";
                 break;
             case "five":
-                return "At this stage of your cycle, ovaluation is here. Your ovary releases an egg. If it's not fertalized, it dissolves.";
+                return "Ready for a baby? NOT ready for a baby? Either way, pay attention: ovaluation is here! Your ovary will releases an egg today; if any sperm is around, your egg will be fertalized! If not, it dissolves, and we all know what happens next...";
                 break;
             case "six":
-                return "Oh no, hormones change!. This may intensify your emotions and tiredness.";
+                return "Ahh, your hormones are changing! This may intensify your emotions and tiredness. Warn loved ones accordingly.";
                 break;
             case "seven":
-                return "Estrogen is dropping. Testosterone and progesteron are surging. Yeah, this means excess oil which leads to breakouts and sensitive skin. Remember to eat healthy.";
+                return "Your estrogen is dropping, while testosterone and progesteron surge. Yeah, this means excess oil which leads to breakouts and sensitive skin (whomp, whomp). Remember to eat healthy!";
                 break;
             case "eight":
-                return "Progesterone is at its peak. You may feel bloated with low libido. Some of you might not feel like doing anything at all. Don't let PMS take over. Do some exercises!";
+                return "Progesterone in your body is at its peak. You may feel bloated, and break out the footy pajamas because your libido is also low. You might not feel like doing anything at all... But we believe in you! Don't let PMS win! Do some exercises and get your blood flowing! (pun intended)";
                     break;
             case "nine":
-                return "Breast soreness is common. Cut down on caffine and sugar intake. Stay hydrated";
+                return "Your breasts are most likely sore. Cut down on caffine and watch your sugar intake. Above all; stay hydrated";
                 break;
             default:
-                return "Update your period info or click the button to understand where you are in the period cycle"
+                return "Update your period info or click the button to understand where you are in your cycle."
         }
     }
     render() {

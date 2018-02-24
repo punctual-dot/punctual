@@ -34,7 +34,7 @@ class MyCalendar extends Component {
                         end: moment(res.data.lastdateoflastperiod).add(1, "day")
                     },
                     {
-                        title: "Next Period, Maybe?",
+                        title: "Your Next Period (Maybe)",
                         allDay: true,
                         start: moment(res.data.lastdateoflastperiod)
                         .subtract(res.data.lengthofperiod, "day")

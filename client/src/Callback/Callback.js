@@ -4,7 +4,7 @@ class Callback extends Component {
     render() {
         return (
             <div>
-                <h2>Logging in, please wait.</h2>
+                <h2>Logging you in, please wait.</h2>
             </div>
         );
     }

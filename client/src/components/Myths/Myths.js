@@ -10,9 +10,7 @@ class Myths extends Component {
 		     {  
 		        country: 'India',
 		        url: 'https://i.imgur.com/hGvRmkM.png',
-		        myth: 'If you wash your hair, your flow will be less and it will affect your fertility later in life.'
-		     
-
+		        myth: 'washing your hair while menstruating makes your flow light, affecting your fertility later in life!',
 
 		     },{
 		        country: 'Poland',
@@ -29,9 +27,9 @@ class Myths extends Component {
 		        myth: 'you should avoid dancing to very active rhythms in order to take care of your uterus!'
 
 		      },{
-		        country: 'United Kingdom',
+		        country: 'The United Kingdom',
 		        url:'https://i.imgur.com/NF1F8rk.png',
-		        myth: 'If you touch any vegetable before or during the pickling process they would not pickle and would go bad.'
+		        myth: 'if you touch any vegetable before or during the pickling process, it will not pickle but go bad instead!'
 
 		      },{
 		        country: 'Italy',
