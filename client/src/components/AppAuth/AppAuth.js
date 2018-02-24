@@ -35,7 +35,7 @@ class AppAuth extends Component {
                             </a>
                         </li>
                     )}
-                    <li className="item"><a href="/profile">Update Your Info</a></li>
+                    <li className="item"><a href="/profile">Settings</a></li>
                     <img src="https://i.imgur.com/mWRPZ4W.png" className="nav-logo" alt="punctual logo" width="auto" height="70px"></img>
                 </ul>
             </div>

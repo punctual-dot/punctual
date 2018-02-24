@@ -45,16 +45,15 @@ class Myths extends Component {
 	    return (
 	        <div className="container-fluid myths-div">
 	           	<h1 className="myth-header">Check out interesting <br /> period myths from around the world!</h1>
-	          { this.state.buttons.map(button => (
-                <Images key= {button.country}
-                        className="flags"
-	            		url={button.url} 
-	            		country={button.country} 
-	           			myth={button.myth} 
-	           			style={{display: "inline-block"}}/>
-	            ))}  
-	         </div>
-
+	            { this.state.buttons.map(button => (
+                    <Images key= {button.country}
+                            className="flags"
+                            url={button.url} 
+                            country={button.country} 
+                            myth={button.myth} 
+                            style={{display: "inline-block"}}/>
+                    ))}  
+	        </div>
 	    )
 	}
 };
