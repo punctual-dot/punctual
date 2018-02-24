@@ -36,7 +36,7 @@ class AppAuth extends Component {
             {
               !isAuthenticated() && (
               <li className="item">
-                  <a href="#"
+                  <a href="/profile"
                     id="qsLoginBtn"
                     onClick={this.login.bind(this)}
                   >
@@ -48,7 +48,7 @@ class AppAuth extends Component {
             {
               isAuthenticated() && (
                 <li className="item">
-                  <a href="#"
+                  <a href="/"
                     id="qsLogoutBtn"
                     onClick={this.logout.bind(this)}
                   >
