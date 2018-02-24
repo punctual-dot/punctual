@@ -30,6 +30,7 @@ export default class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
         history.replace('/profile');
+        console.log(authResult)
       } else if (err) {
         history.replace('/profile');
         console.log(err);
