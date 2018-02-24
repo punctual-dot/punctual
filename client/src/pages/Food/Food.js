@@ -101,7 +101,7 @@ class Food extends React.Component {
                         <div className="col-lg-8 col-lg-offset-2">
                             <div className="container-fluid form">
                                 
-                                       <label>
+                                <label>
                                 Search Food
                                 <input value={this.state.searchQuery} onChange={this.handleInputChange} type="text" name="searchQuery" />
                                 </label>

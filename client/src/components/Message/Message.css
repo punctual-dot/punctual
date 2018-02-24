@@ -11,6 +11,12 @@
  margin-top: 20px;
 }
 
+strong{
+         font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+         color: #86e0d1
+
+}
+
 .extra-info{
     background-color: none;
      font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
@@ -42,7 +48,20 @@
     padding-bottom: 20px;
     padding-top: 0px;
  
-
-
 }
-	
+
+.stage {
+        font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 20px;
+   text-align: center;
+    line-height: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #6e64c5;
+    letter-spacing: 1px;
+    height: 12px;
+    font-style: italic;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+}	

@@ -51,7 +51,7 @@ class Toggle extends Component {
           </div>*/}
         <Accordion>
           {/*Calendar*/}
-          <AccordionItem title={`Cycle`} className={`cycle`}>
+          <AccordionItem title={`Calendar`} className={`calendar`}>
             <BigCalendar />
             <Message />
           </AccordionItem>

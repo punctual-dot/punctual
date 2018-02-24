@@ -150,10 +150,10 @@ class Message extends Component {
                 return "Estrogen is UP! Your face looks more symmetrical, and wow your skin is GLOWING! Testosterone is up as well, so you feel that you are on top of the world. This is a good time to try new things!";
                 break;
             case "four":
-                return "Estogen is at its peak. You are at your sexiest and most fertile. You may feel more optimistic and super social than usual. Make sure to have fun!";
+                return "At this stage of your cycle, estogen is at its peak. You are at your sexiest and most fertile. You may feel more optimistic and super social than usual. Make sure to have fun!";
                 break;
             case "five":
-                return "Ovaluation is here. Your ovary releases an egg. If it's not fertalized, it dissolves.";
+                return "At this stage of your cycle, ovaluation is here. Your ovary releases an egg. If it's not fertalized, it dissolves.";
                 break;
             case "six":
                 return "Oh no, hormones change!. This may intensify your emotions and tiredness.";
@@ -180,8 +180,9 @@ class Message extends Component {
                     <div className="container-fluid form">
                         <div className="fact-section">
                             <h1 className="title"> THE FACTS</h1>
-                                    <div className="result-text-first" id="result"> Hello, {this.state.user.name}! The date of your last period was {moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}. Since your cycle length is about {this.state.user.lengthofcycle} days, we predict that your next period will come on {moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}.</div>
-                  
+
+                                    <div className="result-text-first" id="result"> Hello, {this.state.user.name}! The date of your last period was <strong>{moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}</strong>. Since your cycle length is about <strong> {this.state.user.lengthofcycle} days</strong>, we predict that your next period will come on <strong>{moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}</strong>.</div>
+                                    <h1 className="stage">At this stage of your cycle...</h1>
                                     <div className="extra-info">{this.handleStageResult(this.state.stage)}</div>
                     
                         </div>
