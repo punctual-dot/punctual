@@ -5,10 +5,10 @@ import history from '../history';
 
 export default class Auth {
    auth0 = new auth0.WebAuth({
-    domain: 'app88995703.auth0.com',
-    clientID: 'qbHy5QGeMo8oSIJqyNFKL8Af2xXz0AkJ',
-    redirectUri: 'https://stormy-headland-87409.herokuapp.com/callback',
-    audience: 'https://app88995703.auth0.com/userinfo',
+    domain: 'punctual.auth0.com',
+    clientID: 'yPspsbe0Dwjpi4WNUyNyN0PmiRAR1e6z',
+    redirectUri: 'https://punctualapp.herokuapp.com/callback',
+    audience: 'https://punctual.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid profile'
 
@@ -30,6 +30,7 @@ export default class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
         history.replace('/profile');
+        console.log(authResult)
       } else if (err) {
         history.replace('/profile');
         console.log(err);
