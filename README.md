@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="client/public/readmeHeader.png" alt="Header" style="width: 300px;" /><br>
+	<img src="client/public/readmeHeader.png" alt="Header" style="width: 100px;" /><br>
 </div>
 
 ## Description
@@ -26,9 +26,9 @@ VIDEO here
 ## Screenshots of the app
 
 <div align="center">
-	<img src="client/public/home.png" alt="Header" style="width: 200px;" /><br>
-	<img src="client/public/readmeQ.png" alt="Header" style="width: 200px;" /><br>
-	<img src="client/public/bigbadself.png" alt="Header" style="width: 200px;" /><br>
+	<img src="client/public/home.png" alt="Header" style="width: 100px;" /><br>
+	<img src="client/public/readmeQ.png" alt="Header" style="width: 100px;" /><br>
+	<img src="client/public/bigbadself.png" alt="Header" style="width: 100px;" /><br>
 </div>
 
 ## How to access the app
