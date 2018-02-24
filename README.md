@@ -1,86 +1,51 @@
 <div align="center">
-	<img src="client/public/logo.png "><br>
+	<img src="client/public/readmeHeader.png" alt="Header" style="width: 300px;" /><br>
 </div>
 
 ## Description
 
 **Punctual** is web application designed and developed by [Team Punctual](https://github.com/punctual-dot) to simply & honestly track that horrible time of month. The Punctual App also provides recommendations based on your mood.
 
-## Motivation for Development
+**Punctual is Proud:** There is nothing shameful about periods or people who have them. We're not hiding from this natural process.
 
-Each one of us found that every month we have challenges with our cycle. We all know to ease our symptoms and help with our mood that we should be eating healthier throughout our cycle. To help with that we wanted to create app that helps with these recommendations. The app will also be straightforward and sassier compared to the more delicate and feminine apps that we each currently use.
+**Punctual is Blunt:** No flowery euphemisms or women twirling in A-line skirts in fields of daisies over here; we get to the point.
+
+**Punctual is Trustworthy:** through extensive research and accurate calculations, you can be sure the information we give you is concise and helpful.
+
+**And, Punctual is Sleek:** no frills, no gimmicks, just beauty in the way you'd want your period app to be "beautiful." Now, let’s get into what makes Punctual all these things.
 
 ## Application Concept
 
 Our app will allow our users to track their menstrual cycles and will provide food recommendations based on their mood. The calendar feature will allow the user historically review their cycle.
 
+## Motivation for Development
+
+Each one of us found that every month we have challenges with our cycle. We all know to ease our symptoms that we should be eating healthier throughout our cycle. To help with that we wanted to create an easily accessible app that helps with these recommendations.
+The app is straightforward and sassier compared to the more delicate and feminine apps that are out there.
+
 <div align="center">
-	<img src="xxxx"><br>
+	<img src="client/public/readmeHeader.png" alt="Header" style="width: 300px;" /><br>
 </div>
 
-## Design Process
+## Demo of the app
 
-xxx
+VIDEO here
+
+## Screenshots of the app
+
+<div align="center">
+	<img src="client/public/readmeHeader.png" alt="Header" style="width: 300px;" /><br>
+</div>
 
 ## How to access the app
 
-The app can be accessed [here](https://powerful-shore-33739.herokuapp.com/).
+To start, users log in or register with Punctual using Auth0, an OAuth authentication using JavaScript tokens. Once they're securely in, they are taken to a questionnaire, which will fuel the meat of the app - the tracker itself. A user just enters in relevant information, clicks submit, and we handle the rest.
 
-Once the app has loaded the user will:
-
-* View the site
-
-<div align="left">
-	<img src="xxx">
-</div>
-
-* If the
-
-* If an
-
-* At any time
+The app can be accessed [here](https://punctualapp.herokuapp.com) and follow through the steps below to began using the app.
 
 ## Technology
 
-Technologies:
-
-* HTML
-* CSS
-
-CSS Library:
-
-* [Bootstrap 3.3.7](https://getbootstrap.com/docs/3.3/) - Bootstrap is an open source toolkit for developing with HTML, CSS, and JS.
-
-Javascript itself, modules and libraries:
-
-* [JavaScript](https://www.w3schools.com/js/) - JavaScript, often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.
-* [JSON](https://www.json.org/) - JSON (JavaScript Object Notation) is a lightweight data-interchange format.
-* [Node.js](https://nodejs.org/en/) - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.
-* [Node express server](http://expressjs.com) - Fast, unopinionated, minimalist web framework for Node.js
-
-APIs:
-
-Database:
-
-Cloud Application Platform:
-
-* [Heroku](https://www.heroku.com/) - Cloud Application Platform
-
-## What's Included
-
-Within the download archive you'll find the following directories and files, logically grouping common assets and utilizes the MVC Framework and Application Structure. You'll see something like this:
-
-```
-punctual/
-├── xxxx/
-│   │   ├── xxxx
-│   │   └── xxxx
-├── server.js
-```
-
-## Future development
-
-* xxxxx
+Our app is a [Node Express](http://expressjs.com) application using [React](https://reactjs.org/) on the front-end, and several mongo databases on the backend. We use [React-Big-Calendar](https://github.com/intljusticemission/react-big-calendar) to track that wonderful time of the month. We also incorporate an API from [Yummly](https://developer.yummly.com/) to serve up recipes based on your symptoms. The app itself is hosted on [Heroku](https://www.heroku.com/).
 
 ## Members of [Team Punctual](https://github.com/punctual-dot):
 
