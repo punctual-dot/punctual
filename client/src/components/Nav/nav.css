@@ -1,16 +1,14 @@
 .navbar{
-padding: 0px;
-margin: 0px;
-height: auto;
+    padding: 0px;
+    margin: 0px;
+    height: auto;
 }
 
 .nav-logo{
-  
     float: right;
     margin-top: 8px;
     margin-right: 30px
 }
-
 
 ol, ul {
     list-style: none;

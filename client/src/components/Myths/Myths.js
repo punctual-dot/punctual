@@ -7,7 +7,7 @@ class Myths extends Component {
         super(props)
         this.state = {
 		    buttons: [
-		     {
+		     {  
 		        country: 'India',
 		        url: 'https://i.imgur.com/hGvRmkM.png',
 		        myth: 'If you wash your hair, your flow will be less and it will affect your fertility later in life.'
@@ -43,25 +43,16 @@ class Myths extends Component {
 		}
 	}
 
-
-    // clickMe(country, myth){
-		// let mythTest = "Can you believe in " + country + ", they think " + myth;
-  	// };
-
-
-
-
 	render() {
 	    return (
 	        <div className="container-fluid myths-div">
 	           	<h1 className="myth-header">Check out interesting <br /> period myths from around the world!</h1>
 	          { this.state.buttons.map(button => (
-	            <Images className="flags"
+                <Images key= {button.country}
+                        className="flags"
 	            		url={button.url} 
 	            		country={button.country} 
 	           			myth={button.myth} 
-	           			
-	   
 	           			style={{display: "inline-block"}}/>
 	            ))}  
 	         </div>

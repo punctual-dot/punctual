@@ -25,7 +25,7 @@ class Message extends Component {
     loadUser = id => {
         API.getUser(userId)
         .then(res =>
-            this.setState({user: res.data}, this.determineCycleStage(res.data.firstdayofcycle, moment.utc()), console.log(res.data)))
+            this.setState({user: res.data}, this.determineCycleStage(res.data.firstdayofcycle, moment.utc())))
         .catch(err => console.log(err))
     }
 
@@ -173,26 +173,23 @@ class Message extends Component {
     }
     render() {
         return (
-
             <div>   
-                 <div id="form" className="row">
-                <div className="col-lg-8 col-lg-offset-2">
-                    <div className="container-fluid form">
-                        <div className="fact-section">
-                            <h1 className="title"> THE FACTS</h1>
+                <div id="form" className="row">
+                    <div className="col-lg-8 col-lg-offset-2">
+                        <div className="container-fluid form">
+                            <div className="fact-section">
+                                <h1 className="title"> THE FACTS</h1>
 
-                                    <div className="result-text-first" id="result"> Hello, {this.state.user.name}! The date of your last period was <strong>{moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}</strong>. Since your cycle length is about <strong> {this.state.user.lengthofcycle} days</strong>, we predict that your next period will come on <strong>{moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}</strong>.</div>
-                                    <h1 className="stage">At this stage of your cycle...</h1>
-                                    <div className="extra-info">{this.handleStageResult(this.state.stage)}</div>
-                    
+                                <div className="result-text-first" id="result"> Hello, {this.state.user.name}! The date of your last period was <strong>{moment.utc(this.state.user.lastdateoflastperiod).format("dddd, MMMM Do YYYY")}</strong>. Since your cycle length is about <strong> {this.state.user.lengthofcycle} days</strong>, we predict that your next period will come on <strong>{moment.utc(this.state.user.lastdateoflastperiod).subtract(this.state.user.lengthofperiod, "day").add(this.state.user.lengthofcycle, "day").format("dddd, MMMM Do YYYY")}</strong>.</div>
+
+                                <h1 className="stage">At this stage of your cycle...</h1>
+
+                                <div className="extra-info">{this.handleStageResult(this.state.stage)}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            </div>
-
-
         )
     }
 }

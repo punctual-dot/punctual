@@ -1,25 +1,24 @@
 
 .result-text-first{
-	color: gray;
- font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
-
- font-size: 16px;
- line-height: 26px;
- letter-spacing: .2px;
- font-weight: 400;
- margin-left: 20px;
- margin-top: 20px;
+    color: gray;
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: .2px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 strong{
-         font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
-         color: #86e0d1
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    color: #86e0d1
 
 }
 
 .extra-info{
     background-color: none;
-     font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
     width: 380px;
     border: 3px solid #86e0d1;
     padding: 15px;
@@ -34,9 +33,9 @@ strong{
 }
 
 .title{
-	font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 30px;
-   text-align: center;
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
     line-height: 30px;
     font-weight: 300;
     text-transform: uppercase;
@@ -47,13 +46,13 @@ strong{
     margin-top: 0;
     padding-bottom: 20px;
     padding-top: 0px;
- 
+
 }
 
 .stage {
-        font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 20px;
-   text-align: center;
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
     line-height: 30px;
     font-weight: 300;
     text-transform: uppercase;

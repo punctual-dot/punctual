@@ -1,14 +1,13 @@
 .symptom-section{
 	height: auto;
-  align-content: center;
-
+    align-content: center;
 }
 
 
 .calloutquotes-symptoms{
-	   font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 30px;
-   text-align: center;
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 30px;
+    text-align: center;
     line-height: 30px;
     font-weight: 300;
     text-transform: uppercase;
@@ -23,9 +22,9 @@
 }
 
 .nameofuser{
-		   font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 20px;
-   text-align: center;
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
     line-height: 30px;
     font-weight: 600;
     text-transform: uppercase;
@@ -38,14 +37,12 @@
 }
 
 .symptom-resultstext{
-		   font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
- font-style: italic;
- font-size: 16px;
- line-height: 22px;
-  letter-spacing: .2px;
-      font-weight: 300;
-
-
+    font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: .2px;
+    font-weight: 300;
 }
 
 .item{

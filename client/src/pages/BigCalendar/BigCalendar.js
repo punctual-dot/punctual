@@ -6,7 +6,7 @@ class CalendarPage extends Component {
   render() {
     return (
       <div>
-        <BigCalendar />
+            <BigCalendar />
       </div>
     );
   }

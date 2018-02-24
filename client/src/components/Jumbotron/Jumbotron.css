@@ -1,5 +1,5 @@
 .summary-header {
-background: #F6F6F6;
+    background: #F6F6F6;
 }
 
 .header-text{
@@ -11,8 +11,6 @@ background: #F6F6F6;
 	margin-left: 40px;
 	font-size: 15px;
 }
-
-
 
 @media only screen and (max-width: 800px) {
     .iphone {
@@ -31,10 +29,9 @@ background: #F6F6F6;
 }
 
 
-
 @media only screen and (max-width: 800px) {
     .logo {
-       width: 270px;
+        width: 270px;
        height: auto;
        
     }
@@ -42,103 +39,86 @@ background: #F6F6F6;
 
 @media only screen and (max-width: 800px) {
     .header-text{
-      padding-top: 30px;
+        padding-top: 30px;
       
     }
 }
 
 
-
-
-
-
 @media only screen and (max-width: 765px) {
     .iphone {
-       height:250px;
-       width: auto;
-       padding-top: 20px;
-      margin-right: 100px;
-      padding-right: 0px;
-      float: right;
-
+        height:250px;
+        width: auto;
+        padding-top: 20px;
+        margin-right: 100px;
+        padding-right: 0px;
+        float: right;
     }
 }
 
 @media only screen and (max-width: 765px) {
     .body-text {
-      font-size: 10px;
-      width: 200px;
-      margin-right: 0px;
-      padding-right: 0px
-
+        font-size: 10px;
+        width: 200px;
+        margin-right: 0px;
+        padding-right: 0px
     }
 }
-
-
 
 @media only screen and (max-width: 765px) {
     .logo {
        width: 170px;
        height: ;
       margin-left: 30px
-
     }
 }
 
 @media only screen and (max-width: 765px) {
     .header-text{
-      padding-top: 30px;
-      margin-right: 0px;
-      padding-right: 0px;
-      position: absolute;
-      margin-left: 120px
-
+        padding-top: 30px;
+        margin-right: 0px;
+        padding-right: 0px;
+        position: absolute;
+        margin-left: 120px
     }
 }
 
 
-
 @media only screen and (max-width: 650px) {
     .iphone {
-       height:250px;
-       width: auto;
-       padding-top: 20px;
-      margin-right: 100px;
-      padding-right: 0px;
-      float: right;
-
+        height:250px;
+        width: auto;
+        padding-top: 20px;
+        margin-right: 100px;
+        padding-right: 0px;
+        float: right;
     }
 }
 
 @media only screen and (max-width: 650px) {
     .body-text {
-      font-size: 10px;
-      width: 200px;
-      margin-right: 0px;
-      padding-right: 0px
-
+        font-size: 10px;
+        width: 200px;
+        margin-right: 0px;
+        padding-right: 0px
     }
 }
 
-
-
 @media only screen and (max-width: 650px) {
     .logo {
-       width: 170px;
-       height: ;
-      margin-left: 20px
-
+        width: 170px;
+        height: ;
+        margin-left: 20px
     }
 }
 
 @media only screen and (max-width: 650px) {
     .header-text{
-      padding-top: 30px;
-      margin-right: 0px;
-      padding-right: 0px;
-      position: absolute;
-      margin-left: 40px
-
+        padding-top: 30px;
+        margin-right: 0px;
+        padding-right: 0px;
+        position: absolute;
+        margin-left: 40px
     }
 }
 

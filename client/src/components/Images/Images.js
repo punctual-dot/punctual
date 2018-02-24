@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 class Images extends Component {
 	constructor(props){
         super(props)
@@ -18,12 +17,11 @@ class Images extends Component {
 	render () {
 	  return (
 	    <div className="list-overflow-container">
-	    	<img onClick={ () => this.toggleVisibility() } src={ this.props.url } ></img>
+	    	<img onClick={ () => this.toggleVisibility() } src={ this.props.url } alt='country'></img>
 	    	{ this.state.isVisible && <div className="myths">{ 'In '+ this.props.country + ', they believe that ' + this.props.myth}</div> }	
 	    </div>
 	  );
 	}
-
 };
 
 

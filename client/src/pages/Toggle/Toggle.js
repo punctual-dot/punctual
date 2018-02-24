@@ -6,87 +6,59 @@ import Food from "../../pages/Food";
 import Symptoms from "../../components/Symptoms/Symptoms.js"
 import Message from "../../components/Message/"
 import Jumbotronquote from "../../components/Jumbotronquote/Jumbotronquote.js";
-import {Images} from "../../components/Images/Images.js"
-import Profile from "../Profile/"
 import Myths from "../../components/Myths/"
 
 class Toggle extends Component {
-  /* create state for symptoms results*/
-  state = {
-    foodQuery: null,
-    newQuery: true
-  }
+    state = {
+        foodQuery: null,
+        newQuery: true
+    }
+    setFoodQuery = (data) => {
+        this.setState({
+            foodQuery: data,
+            newQuery: true
+        });
+    }
+
+    setNewQuery = (data) => {
+        this.setState({
+        newQuery: data
+        });
+    }
 
 
-  /* function that sets state for symptom result*/
-  setFoodQuery = (data) => {
-    this.setState({
-      foodQuery: data,
-      newQuery: true
-    });
-  }
+    render() {
+        return (
+            <div>
+                <Jumbotronquote />
+                <Accordion>
+                    <AccordionItem title={`Calendar`} className={`calendar`}>
+                        <BigCalendar />
+                        <Message />
+                    </AccordionItem>
 
-  setNewQuery = (data) => {
-    this.setState({
-      newQuery: data
-    });
-  }
+                    <AccordionItem title={`Symptoms`} className={`symptoms`}>
+                        <Symptoms setFood={this.setFoodQuery}/>
+                    </AccordionItem>
 
+                    <AccordionItem 
+                        title={`Food`} 
+                        className={`food`}
+                        expanded={ this.state.newQuery ? false : true }
+                    >
+                        <Food 
+                        foodQuery={this.state.foodQuery}
+                        newQuery={this.state.newQuery}
+                        setNewQuery={this.setNewQuery}
+                        />
+                    </AccordionItem>
 
-  render() {
-    return (
-     
-      <div>
-    {/*change out to make sense with this page*/}
-      
-
-
-      <Jumbotronquote />
-          {/*<div className="jumbotron jumbotron-fluid">
-            <div className="container">
-
-              <h1 className="display-3">Fluid jumbotron</h1>
-              <p className="lead">Let's get you feeling like your big bad self again, shall we?</p>
+                    <AccordionItem title={`Myths`} className={`myths`}>
+                        <Myths />
+                    </AccordionItem>
+                </Accordion>
             </div>
-          </div>*/}
-        <Accordion>
-          {/*Calendar*/}
-          <AccordionItem title={`Calendar`} className={`calendar`}>
-            <BigCalendar />
-            <Message />
-          </AccordionItem>
-
-          {/*Symptoms*/}
-          <AccordionItem title={`Symptoms`} className={`symptoms`}>
-           {/* pass function that sets symptom state into component as a prop */}
-            <Symptoms
-              setFood={this.setFoodQuery}
-            />
-          </AccordionItem>
-
-          {/*Foods*/}
-          <AccordionItem 
-            title={`Food`} 
-            className={`food`}
-            expanded={ this.state.newQuery ? false : true }
-          >
-          {/* pass symptom state variable into this component */}
-            <Food 
-              foodQuery={this.state.foodQuery}
-              newQuery={this.state.newQuery}
-              setNewQuery={this.setNewQuery}
-            />
-          </AccordionItem>
-          {/*Myths*/}
-
-          <AccordionItem title={`Myths`} className={`myths`}>
-            <Myths />
-
-          </AccordionItem>
-         
-        </Accordion>
-      </div>
-    );
-  }
+        );
+    }
 }
 export default Toggle;

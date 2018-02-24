@@ -91,7 +91,7 @@ class Symptoms extends Component {
     render() {
         return (
 
-              <div id="form" className="row">
+            <div id="form" className="row">
                 <div className="col-lg-8 col-lg-offset-2">
                     <div className="container-fluid form">
                         <div className="symptom-section">
@@ -119,10 +119,9 @@ class Symptoms extends Component {
                                 <p className="symptom-resultstext">{this.state.advice}</p>
                                 {this.state.foods.map(food => (
                 				       
-                                      <p className="item"> 
+                                        <p className="item"> 
                 				            <a onClick={this.handleFoodClick} data-food={food}>{food}</a>
                 				        </p>
-                				 
                 			     ))}
                             </div>
                         </div>
