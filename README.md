@@ -45,6 +45,10 @@ The app can be accessed [here](https://punctualapp.herokuapp.com) and follow thr
 	<img src="client/public/home.png" alt="Header" width="600px"><br><br>
 	<img src="client/public/readmeQ.png" alt="Questionnaire" width="600px">><br><br>
 	<img src="client/public/bigbadself.png" alt="BigBadSelf" width="600px"><br><br>
+	<img src="client/public/calendar.png" alt="Calendar" width="600px"><br><br>
+	<img src="client/public/symptoms.png" alt="Symptoms" width="600px"><br><br>
+	<img src="client/public/food.png" alt="Food" width="600px"><br><br>
+	<img src="client/public/myths.png" alt="Myths" width="600px"><br><br>
 	<img src="client/public/mobile1.png" alt="MobileView" width="600px"><br>
 </div>
 
