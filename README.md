@@ -4,7 +4,7 @@
 
 ## Description
 
-**Punctual** is web application designed and developed by [Team Punctual](https://github.com/punctual-dot) to simply & honestly track that horrible time of month. The Punctual App also provides recommendations based on your mood.
+**Punctual** is web application designed and developed by [Team Punctual](https://github.com/punctual-dot) to simply & honestly track that horrible time of month. The Punctual App also provides recommendations based on your symptoms.
 
 **Punctual is Proud:** There is nothing shameful about periods or people who have them. We're not hiding from this natural process.
 
@@ -12,20 +12,12 @@
 
 **Punctual is Trustworthy:** through extensive research and accurate calculations, you can be sure the information we give you is concise and helpful.
 
-**And, Punctual is Sleek:** no frills, no gimmicks, just beauty in the way you'd want your period app to be "beautiful." Now, let’s get into what makes Punctual all these things.
-
-## Application Concept
-
-Our app will allow our users to track their menstrual cycles and will provide food recommendations based on their mood. The calendar feature will allow the user historically review their cycle.
+**And, Punctual is Sleek:** no frills, no gimmicks, just beauty in the way you'd want your period app to be "beautiful."
 
 ## Motivation for Development
 
 Each one of us found that every month we have challenges with our cycle. We all know to ease our symptoms that we should be eating healthier throughout our cycle. To help with that we wanted to create an easily accessible app that helps with these recommendations.
 The app is straightforward and sassier compared to the more delicate and feminine apps that are out there.
-
-<div align="center">
-	<img src="client/public/readmeHeader.png" alt="Header" style="width: 300px;" /><br>
-</div>
 
 ## Demo of the app
 
@@ -34,7 +26,10 @@ VIDEO here
 ## Screenshots of the app
 
 <div align="center">
-	<img src="client/public/readmeHeader.png" alt="Header" style="width: 300px;" /><br>
+	<img src="client/public/home.png" alt="Header" style="width: 300px;" /><br>
+</div>
+<div align="center">
+	<img src="client/public/bigbadself.png" alt="Header" style="width: 300px;" /><br>
 </div>
 
 ## How to access the app
