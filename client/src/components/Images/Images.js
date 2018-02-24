@@ -19,7 +19,7 @@ class Images extends Component {
 	  return (
 	    <div className="list-overflow-container">
 	    	<img onClick={ () => this.toggleVisibility() } src={ this.props.url } ></img>
-	    	{ this.state.isVisible && <div className="myths">{ 'In '+ this.props.country + ', they believe that ' + this.props.myth }</div> }	
+	    	{ this.state.isVisible && <div className="myths">{ 'In '+ this.props.country + ', they believe that ' + this.props.myth}</div> }	
 	    </div>
 	  );
 	}

@@ -1,3 +1,43 @@
-.flags{
+
+.myths-div{
+	height: 2000px
+}
+
+.myth{
+			font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+			size: 30px
+
+}
+.myth-header{
+		font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 30px;
+   text-align: center;
+    line-height: 30px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #6e64c5;
+    letter-spacing: 1px;
+    height: 12px;
+    font-style: italic;
+    margin-top: 35px;
+    padding-bottom: 60px;
+    padding-top: 0px;
+
+}
+
+
+.list-overflow-container{
 	display: inline-block;
+	margin-top: 40px;
+	margin-right: 20px;
+	margin-left: 55px;
+	width: 308px;
+	height: 300px;
+	color:  #6e64c5;
+	font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+	 font-size: 16px;
+	 font-style: light;
+	-webkit-box-shadow: 6px 7px 18px -8px rgba(112,135,133,0.72);
+-moz-box-shadow: 6px 7px 18px -8px rgba(112,135,133,0.72);
+box-shadow: 6px 7px 18px -8px rgba(112,135,133,0.72);
 }

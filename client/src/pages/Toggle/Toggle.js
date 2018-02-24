@@ -70,8 +70,8 @@ class Toggle extends Component {
             />
           </AccordionItem>
           {/*Myths*/}
-          <AccordionItem title={`Myths2`} className={`myths2`}>
-            <Myths2 />
+          <AccordionItem title={`Myths`} className={`myths`}>
+            <Myths />
           </AccordionItem>
         </Accordion>
       </div>

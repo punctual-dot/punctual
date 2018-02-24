@@ -8,35 +8,34 @@ class Myths extends Component {
         this.state = {
 		    buttons: [
 		     {
-		        country: 'Israel',
-		        url: 'http://img.freeflagicons.com/thumb/round_icon/israel/israel_64.png',
-		        myth: 'you get slapped in the face when you get your first period so you have “beautiful” red cheeks all your life!'
+		        country: 'India',
+		        url: 'https://i.imgur.com/hGvRmkM.png',
+		        myth: 'If you wash your hair, your flow will be less and it will affect your fertility later in life.'
+		     
+
 
 		     },{
 		        country: 'Poland',
-		        url:'http://img.freeflagicons.com/thumb/round_icon/poland/poland_64.png',
+		        url:'https://i.imgur.com/DKO2yiJ.png',
 		        myth: 'having sex while menstruating can kill your partner!'
 
 		      },{
 		        country: 'Malaysia',
-		        url:'http://img.freeflagicons.com/thumb/round_icon/malaysia/malaysia_64.png',
+		        url:'https://i.imgur.com/YKT5nY0.png',
 		        myth: 'you need to wash your pads before throwing them out, otherwise ghosts will come and haunt you!'
-		      },
-		      {
+		      },{
 		        country: 'Mexico',
-		        url:'http://img.freeflagicons.com/thumb/round_icon/mexico/mexico_64.png',
+		        url:'https://i.imgur.com/baT1rQf.png',
 		        myth: 'you should avoid dancing to very active rhythms in order to take care of your uterus!'
 
-		      },
-		      {
-		        country: 'Argentina',
-		        url:'http://img.freeflagicons.com/thumb/round_icon/argentina/argentina_64.png',
-		        myth: 'you can’t make whipped cream, because it will curdle!'
+		      },{
+		        country: 'United Kingdom',
+		        url:'https://i.imgur.com/NF1F8rk.png',
+		        myth: 'If you touch any vegetable before or during the pickling process they would not pickle and would go bad.'
 
-		      },
-		      {
+		      },{
 		        country: 'Italy',
-		        url:'http://img.freeflagicons.com/thumb/round_icon/italy/italy_64.png',
+		        url:'https://i.imgur.com/blQoWCT.png',
 		        myth: 'any dough you make won’t rise!'
 
 		      }
@@ -54,10 +53,16 @@ class Myths extends Component {
 
 	render() {
 	    return (
-	        <div>
-	           	<h1>Click on a country's flag to find out an interesting period myth!</h1>
+	        <div className="container-fluid myths-div">
+	           	<h1 className="myth-header">Check out interesting <br /> period myths from around the world!</h1>
 	          { this.state.buttons.map(button => (
-	            <Images className="flags" url={button.url} country={button.country} myth={button.myth}  />
+	            <Images className="flags"
+	            		url={button.url} 
+	            		country={button.country} 
+	           			myth={button.myth} 
+	           			
+	   
+	           			style={{display: "inline-block"}}/>
 	            ))}  
 	         </div>
 
