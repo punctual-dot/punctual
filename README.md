@@ -1,11 +1,13 @@
-#Punctual
+# Punctual
+
+<div align="center">
+	<img src="client/public/readmeHeader.png" alt="Header" width="800px"><br>
+</div>
+<br>
+
 ![builtwithlove](http://forthebadge.com/images/badges/built-with-love.svg)
 [![forthebadge](https://forthebadge.com/images/badges/built-by-codebabes.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-swag.svg)](https://forthebadge.com)
-
-<div align="center">
-	<img src="client/public/readmeHeader.png" alt="Header" width="200px"><br>
-</div>
 
 ## Description
 
@@ -26,8 +28,9 @@ The app is straightforward and sassier compared to the more delicate and feminin
 
 ## Demo of the app
 
+VIDEO HERE
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE" target="_blank">
- <img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
+<img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
 </a>
 
 ## How to access the app
@@ -39,10 +42,10 @@ The app can be accessed [here](https://punctualapp.herokuapp.com) and follow thr
 ## Screenshots of the app
 
 <div align="center">
-	<img src="client/public/home.png" alt="Header" width="200px"><br><br>
-	<img src="client/public/readmeQ.png" alt="Questionnaire" width="200px">><br><br>
-	<img src="client/public/bigbadself.png" alt="BigBadSelf" width="200px"><br><br>
-	<img src="client/public/mobile1.png" alt="MobileView" width="200px"><br>
+	<img src="client/public/home.png" alt="Header" width="600px"><br><br>
+	<img src="client/public/readmeQ.png" alt="Questionnaire" width="600px">><br><br>
+	<img src="client/public/bigbadself.png" alt="BigBadSelf" width="600px"><br><br>
+	<img src="client/public/mobile1.png" alt="MobileView" width="600px"><br>
 </div>
 
 ## Technology
