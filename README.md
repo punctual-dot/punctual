@@ -26,13 +26,6 @@
 Each one of us found that every month we have challenges with our cycle. We all know to ease our symptoms that we should be eating healthier throughout our cycle. To help with that we wanted to create an easily accessible app that helps with these recommendations.
 The app is straightforward and sassier compared to the more delicate and feminine apps that are out there.
 
-## Demo of the app
-
-VIDEO HERE
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=YOUTUBE_VIDEO_ID_HERE" target="_blank">
-<img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" />
-</a>
-
 ## How to access the app
 
 To start, users log in or register with Punctual using Auth0, an OAuth authentication using JavaScript tokens. Once they're securely in, they are taken to a questionnaire, which will fuel the meat of the app - the tracker itself. A user just enters in relevant information, clicks submit, and we handle the rest.
